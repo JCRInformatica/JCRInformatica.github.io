@@ -3,11 +3,26 @@ body
 	background: $background
 	color: $black
 	font-size: $base-font-size
+	font-family: $font-family
 	box-sizing: border-box
 	min-height: 100vh
 
 	*
 		box-sizing: inherit
+
+a
+	color: $brand-color
+	text-decoration: none
+
+.btn
+	display: inline-block
+	padding: $spacing / 4 $spacing
+	border-radius: .3em
+
+.reverse
+	color: $bg-color
+	background-color: $brand-color
+	text-shadow: 0 -1px 1px $black
 
 img
 	max-width: 100%
