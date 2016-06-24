@@ -57,14 +57,14 @@
 				repeat: no-repeat
 				position: center
 
-		&.jhs .wrapper
+		&.jcr .wrapper
 			background:
-				// image: radial-gradient(center 15%, lightgreen, darkgreen 100%)
-				image: radial-gradient(rgba(lightblue, .1), rgba(darkblue, .5)), url('https://images2.alphacoders.com/203/20350.jpg')
+				image: url($bg-jcr)
+				image: radial-gradient(rgba(lightblue, .1), rgba(darkblue, .5)), url($bg-jcr)
 		&.bon .wrapper
 			background:
-				// image: radial-gradient(center 85%, lightblue, darkblue 100%)
-				image: radial-gradient(rgba(yellow, .1), rgba(brown, .5)), url('http://themarketingrookie.com/wp-content/uploads/2015/10/social-media-mobile-apps-ss-1920dark.jpg')
+				image: url($bg-bon)
+				image: radial-gradient(rgba(yellow, .1), rgba(brown, .5)), url($bg-bon)
 
 	+media-min($on-tablet)
 		$rotation: 15
@@ -80,7 +80,7 @@
 				&>*
 					max-width: 50%
 					padding: 0
-			&.jhs .wrapper
+			&.jcr .wrapper
 				margin-right: -#{$rotation*2}%
 				padding: 0 #{$rotation/2}% 25% 25%
 			&.bon .wrapper

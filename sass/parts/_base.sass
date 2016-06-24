@@ -38,9 +38,6 @@ li
 +module(flex)
 	display: flex
 
-	.expand
-		flex: 1
-
 	+variant(wrap)
 		flex-wrap: wrap
 		&>*
@@ -67,3 +64,6 @@ li
 	+media-max($on-palm)
 		&:not([#{$am-prefix}-flex~=row])
 			flex-direction: column !important
+
+	+module(cell)
+		flex: 1
