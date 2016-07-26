@@ -1,46 +1,23 @@
-<!doctype html>
-<html class="no-js" lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Portal Grupo JCR - Escolha um caminho</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link href='https://fonts.googleapis.com/css?family=Quicksand|Kaushan+Script' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">Você está usando um navegador <strong>DESATUALIZADO</strong>. Por favor, <a href="http://browsehappy.com/">atualize seu navegador</a> para melhorar a sua experiência.</p>
-        <![endif]-->
+---
+layout: default
+---
 
+<div class="home">
 
-        <div class="main home" data-flex="center justify">
-            <section class="choice jcr" data-flex="center" data-cell>
-                <div class="wrapper" data-flex="column center">
-                    <h1>JCR</h1>
-                    <h2 class="choice-subtitle">Informática</h2>
-                    <p>Serviços para residências e empresas. Instalação, configuração e manutenção de hardware e software.</p>
-                    <p><a href="#" class="btn reverse">ENTRAR</a></p>
-                </div>
-            </section>
-            <section class="choice bon" data-flex="center" data-cell>
-                <div class="wrapper" data-flex="column center">
-                    <h1>BonSaiTes</h1>
-                    <h2 class="choice-subtitle">Marketing&nbsp;Digital</h2>
-                    <p>Produção de campanhas de anúncios, links patrocinados e e-mail marketing. Análise de SEO e programação de hotsites, blogs e sites corporativos em geral.</p>
-                    <p><a href="#" class="btn reverse">ENTRAR</a></p>
-                </div>
-            </section>
-            <div class="spinner" data-flex="center column">
-                <div class="triangle-skew-spin"><div></div></div>
-                <p>ESCOLHA&#133;</p>
-            </div>
-        </div>
+  <h1 class="page-heading">Posts</h1>
 
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <script src="js/main.js"></script>
-        <!-- Google Analytics! -->
-    </body>
-</html>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
