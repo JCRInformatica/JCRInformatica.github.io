@@ -4,10 +4,10 @@
 
     <h2 class="footer-heading">{{ site.title }}</h2>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
+    <div data-grid="space" class="footer-grid">
+
+      <div data-cell="1of3">
         <ul class="contact-list">
-          <li>{{ site.title }}</li>
           <li>email</li>
           <li>telefone</li>
           <li>outros contatos</li>
@@ -15,7 +15,7 @@
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2">
+      <div data-cell="1of3">
         <ul class="social-media-list">
           {% if site.github_username %}
           <li>
@@ -31,9 +31,10 @@
         </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
+      <div data-cell="1of3">
         <p>{{ site.description }}</p>
       </div>
+
     </div>
 
   </div>

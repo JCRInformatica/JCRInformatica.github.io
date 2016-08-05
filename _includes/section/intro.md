@@ -1,10 +1,3 @@
----
-layout: page
-title: Sobre a JCR Informática
-menu-title: Sobre
-permalink: /sobre/
----
-
 ## Quem Somos
 
 A JCR Informática é uma empresa de soluções em TI. Contamos com uma equipe técnica qualificada para poder atender profissionalmente todos nossos clientes.
