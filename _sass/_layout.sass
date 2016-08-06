@@ -2,55 +2,73 @@
     // Positioning context for the mobile navigation icon
     position: relative
     padding: 0
+    background:
+        image: url('http://simplexmotion.com/wp-content/uploads/2015/06/Network-Abstract-Wallpaper.jpg')
+        repeat: no-repeat
+        position: center
+        size: cover
 
     +media-greater($content-width)
         margin-top: $spacing-unit
 
 .site-title
     padding: $spacing-unit
+    transition: .6s ease-in-out
 
-    +media-query($on-palm)
-        padding: $spacing-unit / 2
+    &.title-jcr
+        background-color: rgba($azul, .3)
+    &.title-bon
+        background-color: rgba($amarelo, .3)
 
-.title-jcr
-    background-color: lighten($azul, 30%)
-.title-bon
-    background-color: $amarelo
+    img
+        display: block
+        width: 220px
+        margin: auto
+
+    .site-title-caption
+        text-align: center
+
+        +media-greater($on-laptop)
+            display: block
+            font-size: 1.2em
+            margin: auto
+            max-width: 220px
+
+        strong
+            font-size: 1.2em
+
++media-query($on-palm)
+    padding: $spacing-unit / 2
 
 .site-nav
-    float: right
+    text-align: right
     line-height: 56px
     overflow: hidden
-    margin: 0 $spacing-unit / 2
+    padding: 0 $spacing-unit / 2
+    border-top: 3px solid $amarelo
 
     .menu-icon
         display: none
 
-
-    .page-link 
-        color: $text-color
-        line-height: $base-line-height
-
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) 
-            margin-right: 20px
+    .page-link
+        margin-left: 20px
+        color: currentcolor
 
 
     @include media-query($on-palm)
         position: absolute
         top: 100%
         right: 0
-        padding: $spacing-unit / 2
+        padding: $spacing-unit / 4
         text-align: right
-        margin: 0
+        border-top: none
+        transition: .5s ease-in-out
+        perspective: 300px
 
         .menu-icon
             display: block
             float: right
             width: 36px
-            height: 26px
-            line-height: 0
-            padding-top: 10px
             text-align: center
 
             > svg 
@@ -65,36 +83,36 @@
         .trigger 
             clear: both
             display: none
+            margin-top: 15px
+            padding: 5px 10px
             transform-origin: top right
+            background-color: $grey-color-dark
+            color: #fff
         
 
         &:hover
-            background-color: lighten($azul, 30%)
-            transition: .5s ease-in-out
 
             .trigger 
                 display: block
-                padding-bottom: 5px
-                animation: show .5s ease-in-out forwards
+                animation: show .3s ease-in-out forwards
         
 
         .page-link 
             display: block
-            padding: 15px 10px
-
-            &:not(:last-child) 
-                margin-right: 0
-            
-            margin-left: 20px
+            padding: 0 20px
+            margin: 10px 0
 
 
 @keyframes show
     0%
         opacity: 0
-        transform: rotateY(90deg) translate(100%) scale(0)
+        transform: rotateX(-90deg)
+    70%
+        opacity: 1
+        transform: rotateX(10deg)
     100%
         opacity: 1
-        transform: rotateY(0deg) translate(0%) scale(1)
+        transform: rotateX(0deg)
 
 
 
@@ -103,7 +121,9 @@
     .wrapper
         background-color: $grey-color-dark
         color: #fff
-        border-radius: 0 0 $spacing-unit * 2 0
+
+        +media-greater($content-width)
+            border-radius: 0 0 $spacing-unit * 2 0
 
     +media-greater($content-width)
         margin-bottom: $spacing-unit

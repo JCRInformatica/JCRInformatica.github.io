@@ -39,6 +39,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm 
+    margin-top: $spacing-unit / 2
     margin-bottom: $spacing-unit / 2
 
 
@@ -102,10 +103,6 @@ h1, h2, h3, h4, h5, h6
 a 
     color: $brand-color
     text-decoration: none
-
-    &:visited 
-        color: darken($brand-color, 15%)
-    
 
     &:hover 
         color: $text-color
@@ -208,5 +205,39 @@ pre
         path 
             fill: $grey-color
         
-    
 
++module(btn)
+    display: inline-block
+    padding: .5em 1.2em
+    background-color: saturate($grey-color, 100%)
+    border: 1px solid transparent
+    border-radius: 4px
+    text-shadow: 0 -1px 1px $grey-color-dark
+    text-decoration: none
+    color: #fff
+    transition: .3s ease-in-out
+
+    +variant(muted)
+        background-color: $grey-color
+        &:hover, &:focus
+            box-shadow: 0 0 0 2px #fff,  0 0 0 4px $grey-color
+    +variant(danger)
+        background-color: saturate($grey-color-dark, 100%)
+        &:hover, &:focus
+            box-shadow: 0 0 0 2px #fff,  0 0 0 4px saturate($grey-color-dark, 100%)
+    +variant(reverse)
+        background-color: saturate($grey-color-light, 100%)
+        color: $azul
+        text-shadow: 0 1px 1px #fff
+        &:hover, &:focus
+            box-shadow: 0 0 0 2px #fff,  0 0 0 4px saturate($grey-color-light, 100%)
+    +variant(pill)
+        border-radius: 10em
+
+    &:visited, &:hover
+        color: #fff
+        text-decoration: none
+
+    &:hover, &:focus
+        box-shadow: 0 0 0 2px #fff,  0 0 0 4px $azul
+        outline: none

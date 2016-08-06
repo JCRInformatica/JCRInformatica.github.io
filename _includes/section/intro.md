@@ -1,20 +1,15 @@
-## Quem Somos
+## Sobre a JCR Informática
 
-A JCR Informática é uma empresa de soluções em TI. Contamos com uma equipe técnica qualificada para poder atender profissionalmente todos nossos clientes.
-Sempre em busca de soluções para nossos clientes, a honestidade e serviços de qualidade é o fator que nos destaca.
+Somos uma empresa de soluções em TI completa e apaixonada pela evolução tecnológica. Formamos uma equipe técnica selecionada e qualificada com muito cuidado e atenção, com o preparo para apresentar sempre as melhores soluções para cuidar da sua empresa.
 
 
-### Surgimento da JCR
+### Nossa história
 
-A JCR Informática – Soluções em TI, surgiu em 2012, exatamente em 02 de novembro de 2012, mas com um gama de 11 anos de experiencia na area de TI, sempre aplicando a melhor solução em cada situação encontrada, e com o interesse de atender o mercado carente de profissionais competentes e que pudessem realmente oferecer soluções para seus. De inicio a JCR Informática oferecia somente pequenos serviços, aos consumidores finais com manutenção em todos os tipos de equipamentos de informática, como Computadores, Monitores, Impressoras, etc.
+A JCR Informática surgiu em 2 de novembro de 2012. Dois irmãos uniram sua experiência de mais de 11 anos na área de TI com o interesse de atender o mercado carente de profissionais competentes. De início oferecíamos somente pequenos serviços aos consumidores finais com manutenção em todos os tipos de equipamentos de informática, como computadores, monitores e impressoras.
 
-Hoje a JCR Informática, acrescentou em sua gama de serviços a Consultoria empresarial, com Consultores técnicos, Soluções de Redes de Computadores, Firewall, Assistência Técnica especializada.
+Hoje a JCR Informática acrescentou em sua gama de serviços a consultoria técnica empresarial, soluções de redes de computadores, firewall e assistência técnica especializada.
 
 ### Serviços
-
-Hoje a empresa se estabelece no mercado há 2 anos. Através de nossa equipe altamente especializada, com treinamentos periódicos que garantem a alta qualidade dos serviços de reparo e manutenção em computadores e seus periféricos.
-
-__Alguns de nossos serviços:__
 
 - Servidores 2012 / 2008 / 2003;
 - Active directory, Controle de Acessos;
@@ -26,6 +21,5 @@ __Alguns de nossos serviços:__
 
 ### Produtos
 
-A JCR Informática trabalha com produtos de alta qualidade e tecnologia, proporcionando para você e sua empresa o que há de melhor em informática. Conheça as principais marcas.
-
 _Empresas, marcas, tecnologias, etc._
+
