@@ -2,9 +2,9 @@
 
   <div data-grid>
     <article data-grid="center justify space" data-cell="2of3" href="{{ site.baseurl }}/" class="site-title title-jcr">
-      <div>
+      <h1 title="JCR Informática - soluções em TI">
         <img src="{{ site.baseurl }}/img/Logo-JCR.png" alt="Logo JCR">
-      </div>
+      </h1>
       <div class="site-title-caption">
         <p><strong>Informática</strong></p>
         <p><small>Instalação, manutenção e configuração de dispositivos e redes.</small></p>
@@ -32,7 +32,7 @@
     </a>
 
     <div class="trigger">
-      <a class="page-link" href="{{ site.baseurl }}">Início</a>
+      <a class="page-link" href="{{ site.baseurl }}/">Início</a>
       {% for my_page in site.pages %}
         {% if my_page.menu-title %}
         <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.menu-title }}</a>
