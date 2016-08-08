@@ -17,8 +17,20 @@
 
     &.title-jcr
         background-color: rgba($azul, .3)
+        +media-query($on-palm)
+            order: 1
     &.title-bon
         background-color: rgba($amarelo, .3)
+
+        +media-query($on-palm)
+            padding: 15px
+            order: 0
+            flex-direction: row
+            justify-content: center
+
+            p
+                display: inline-block
+                margin: 0
 
     img
         display: block
@@ -27,12 +39,10 @@
 
     .site-title-caption
         text-align: center
+        max-width: 220px
 
-        +media-greater($on-laptop)
-            display: block
-            font-size: 1.2em
-            margin: auto
-            max-width: 220px
+        +media-query($on-laptop)
+            font-size: .8em
 
         strong
             font-size: 1.2em

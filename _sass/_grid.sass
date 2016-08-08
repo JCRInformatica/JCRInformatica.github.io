@@ -47,6 +47,10 @@
         > :not(:last-child)
             margin-right: $spacing-unit / 2
         +media-query($on-palm)
+            > :not(:first-child)
+                margin-left: 0
+            > :not(:last-child)
+                margin-right: 0
             > *
                 margin-bottom: $spacing-unit / 2
 
