@@ -72,7 +72,7 @@ figcaption
  * Lists
  */
 ul, ol 
-    margin-left: $spacing-unit
+    margin-left: $spacing-unit / 2
 
 
 li 
@@ -168,10 +168,15 @@ pre
     margin-right: auto
     margin-left: auto
     padding: $spacing-unit
-    background-color: #FFF
+    background-color: $grey-color-dark
+    color: #fff
+
     @extend %clearfix
 
-    @include media-query($on-laptop) 
+    h1, h2, h3, h4, h5, h6
+        color: $amarelo
+
+    +media-query($on-laptop) 
         max-width: $content-width
         padding: $spacing-unit / 2
     

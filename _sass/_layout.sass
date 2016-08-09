@@ -7,6 +7,8 @@
         repeat: no-repeat
         position: center
         size: cover
+        color: $grey-color-light
+    color: $grey-color-dark
 
     +media-greater($content-width)
         margin-top: $spacing-unit
@@ -68,7 +70,6 @@
         padding: $spacing-unit / 4
         text-align: right
         border-top: none
-        transition: .5s ease-in-out
         perspective: 300px
 
         .menu-icon
@@ -82,7 +83,7 @@
                 height: 15px
 
                 path 
-                    fill: $grey-color-dark
+                    fill: #fff
 
 
 
@@ -92,7 +93,7 @@
             margin-top: 15px
             padding: 5px 10px
             transform-origin: top right
-            background-color: $grey-color-dark
+            background-color: $grey-color
             color: #fff
         
 
@@ -113,6 +114,7 @@
     0%
         opacity: 0
         transform: rotateX(-90deg)
+        pointer-events: none
     70%
         opacity: 1
         transform: rotateX(10deg)
@@ -125,8 +127,6 @@
 .site-footer
 
     .wrapper
-        background-color: $grey-color-dark
-        color: #fff
 
         +media-greater($content-width)
             border-radius: 0 0 $spacing-unit * 2 0
@@ -180,7 +180,7 @@
 
 
 .post-header 
-    margin-bottom: $spacing-unit
+    margin: $spacing-unit 0
 
 
 .post-title 
