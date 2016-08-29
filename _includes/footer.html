@@ -4,37 +4,19 @@
 
     <h2 class="footer-heading">{{ site.title }}</h2>
 
-    <div data-grid="space" class="footer-grid">
-
-      <div data-cell="1of3">
-        <ul class="contact-list">
-          <li>email</li>
-          <li>telefone</li>
-          <li>outros contatos</li>
-          <li>redes sociais</li>
+    <div data-grid="center spacing">
+      <div data-cell="1of2">
+        <ul>
+          <li>Endereço</li>
+          <li>Telefone</li>
+          <li>Contatos</li>
+          <li>Redes sociais</li>
         </ul>
       </div>
-
-      <div data-cell="1of3">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div data-cell="1of3">
+      
+      <div data-cell="1of2">
         <p>{{ site.description }}</p>
       </div>
-
     </div>
 
   </div>

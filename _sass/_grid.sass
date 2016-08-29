@@ -1,16 +1,18 @@
 
 +module(grid)
     > *
-        flex: 1 1 auto
         display: inline-block
-        vertical-align: middle
+        flex: 1 1 auto
         min-width: 0%
     +module(grid)
         display: flex
-        width: 100%
 
     +media-query($on-palm)
         flex-direction: column
+        > *
+            flex-basis: auto !important // IE bug #1
+            max-width: 100% // IE bug #2
+
 
     +variant(row)
         flex-direction: row
@@ -41,11 +43,9 @@
     +variant(stretch)
         align-items: stretch
 
-    +variant(space)
-        > :not(:first-child)
-            margin-left: $spacing-unit / 2
+    +variant(spacing)
         > :not(:last-child)
-            margin-right: $spacing-unit / 2
+            margin-right: $spacing-unit
         +media-query($on-palm)
             > :not(:first-child)
                 margin-left: 0
@@ -59,6 +59,8 @@
         +variant(nospace)
             margin-left: 0 !important
             margin-right: 0 !important
+        +variant(shrink)
+            flex: 0 1 auto
 
         +variant(1of2)
             flex-basis: 50%
@@ -70,12 +72,13 @@
             flex-basis: 66.666%
 
         +media-query($on-palm)
-            width: 100%
-            flex-basis: auto
             margin-left: 0 !important
             margin-right: 0 !important
+
             +variant(nospace)
                 margin-bottom: 0
+            +variant(fill)
+                width: 100%
 
     +variant(cols-2)
         flex-wrap: wrap
@@ -84,8 +87,8 @@
             display: inline-block
 
             +media-greater($on-palm)
-                flex-basis: 40%
-                width: 40%
+                flex-basis: 50%
+                width: 50%
 
                 &:nth-child(odd)
                     margin-left: 0 !important

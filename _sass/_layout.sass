@@ -1,206 +1,163 @@
+
 .site-header
+    min-height: 56px
+    background-color: #fff
     // Positioning context for the mobile navigation icon
     position: relative
-    padding: 0
-    background:
-        image: url($bg-img)
-        repeat: no-repeat
-        position: center
-        size: cover
-        color: $grey-color-light
-    color: $grey-color-dark
-
-    +media-greater($content-width)
-        margin-top: $spacing-unit
 
 .site-title
-    padding: $spacing-unit
-
-    &.title-jcr
-        background-color: rgba($azul, .5)
-
-    &.title-bon
-        background-color: rgba($amarelo, .3)
-
-        +media-query($on-palm)
-            padding: 15px
-            flex-direction: row
-            justify-content: center
-
-            p
-                margin: 5px 0
+    height: 56px
+    line-height: 56px
+    float: left
 
     img
-        display: block
-        width: 220px
-        margin: auto
-
-    .site-title-caption
-        text-align: center
-        max-width: 220px
-
-        +media-query($on-laptop)
-            font-size: .8em
-
-        strong
-            font-size: 1.2em
-
-+media-query($on-palm)
-    padding: $spacing-unit / 2
+        height: 80%
+        width: auto
+        margin-right: $spacing-unit / 4
 
 .site-nav
-    text-align: right
+    float: right
     line-height: 56px
-    overflow: hidden
-    padding: 0 $spacing-unit / 2
-    border-top: 3px solid $amarelo
-
     .menu-icon
         display: none
-
     .page-link
-        margin-left: 20px
-        color: currentcolor
-
-
-    @include media-query($on-palm)
+        color: $text-color
+        line-height: $base-line-height
+        // Gaps between nav items, but not on the last one
+        &:not(:last-child)
+            margin-right: 20px
+    +media-query($on-palm)
         position: absolute
-        top: 100%
-        right: 0
-        padding: $spacing-unit / 4
+        top: 9px
+        right: $spacing-unit / 2
+        border-radius: 5px
         text-align: right
-        border-top: none
-        perspective: 300px
-
         .menu-icon
             display: block
             float: right
             width: 36px
+            height: 26px
+            line-height: 0
+            padding-top: 10px
             text-align: center
-
-            > svg 
+            > svg
                 width: 18px
                 height: 15px
-
-                path 
-                    fill: #fff
-
-
-
-        .trigger 
+                path
+                    fill: $grey-color-dark
+        .trigger
             clear: both
             display: none
-            margin-top: 15px
-            padding: 5px 10px
-            transform-origin: top right
-            background-color: $grey-color
-            color: #fff
-        
-
-        &:hover
-
-            .trigger 
-                display: block
-                animation: show .3s ease-in-out forwards
-        
-
-        .page-link 
+            opacity: 0
+            transition: opacity .5s ease-in-out
+        &:hover .trigger
             display: block
-            padding: 0 20px
-            margin: 10px 0
+            padding-top: 5px
+            padding-bottom: 5px
+            background-color: #fff
+            opacity: 1
+        .page-link
+            display: block
+            padding: 5px 10px
+            &:not(:last-child)
+                margin-right: 0
+            margin-left: 20px
 
 
-@keyframes show
-    0%
-        opacity: 0
-        transform: rotateX(-90deg)
-        pointer-events: none
-    70%
-        opacity: 1
-        transform: rotateX(10deg)
-    100%
-        opacity: 1
-        transform: rotateX(0deg)
+
+
+.page-content
+    
+    .wrapper
+        background-color: $grey-color-dark
+        color: $grey-color-light
+        padding: $spacing-unit
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6
+            color: #fff
+            font-family: 'Eras Bold ITC', sans-serif
+
+    +media-greater($content-width)
+
+        &.first
+            .wrapper
+                border-radius: $spacing-unit / 4 $spacing-unit / 4 0 0
+        &.last
+            .wrapper
+                border-radius: 0 0 $spacing-unit / 4 $spacing-unit / 4
+
+
+    .color-positive
+        background-color: $grey-color-light
+        color: $grey-color-dark
+        padding: $spacing-unit / 2
+        border-radius: $spacing-unit / 4
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6
+            color: $grey-color-dark
+
 
 
 
 .site-footer
+    padding-top: $spacing-unit
+    padding-bottom: $spacing-unit
+    color: $grey-color-dark
 
-    .wrapper
-
-        +media-greater($content-width)
-            border-radius: 0 0 $spacing-unit * 2 0
-
-    +media-greater($content-width)
-        margin-bottom: $spacing-unit
-
-
-.footer-heading
-    font-size: 18px
-    margin-bottom: $spacing-unit / 2
-
-.contact-list, .social-media-list
-    list-style: none
-    margin-left: 0
-
-.footer-grid 
-    font-size: 15px
-    color: $grey-color
-
-
-
-.page-content 
-    padding: 0
-
-
-.page-heading 
-    font-size: 20px
-
-
-.post-list 
-    margin-left: 0
-    list-style: none
-
-    > li 
-        margin-bottom: $spacing-unit
-
-
-
-.post-meta 
-    font-size: $small-font-size
-    color: $grey-color
-
-
-.post-link 
-    display: block
-    font-size: 24px
+    ul
+        margin: 0
+        list-style: none
 
 
 
 
+.section-hero
+    text-align: center
 
-.post-header 
-    margin: $spacing-unit 0
+    .hero-img
+        padding-top: $spacing-unit
+        align-self: stretch
+        overflow-y: hidden
+
+        img
+            margin-bottom: -50px
+
+    +media-query($on-palm)
+
+        .hero-img
+
+            img
+                max-width: 60%
+                margin: auto
+
+    .hero-heading
+
+    .hero-title
+        font-size: 1.2em
+
+    .hero-aside
+        background-color: $amarelo
+        padding: $spacing-unit / 2
+        border-radius: $spacing-unit / 4
+
+        +media-query($on-palm)
+            align-self: stretch
+
+        .hero-title
+            margin-top: 0
 
 
-.post-title 
-    letter-spacing: -1px
-    line-height: 1
 
-    +media-query($on-laptop) 
-        font-size: 36px
+.section-empresa
 
-
-
-.post-content 
-    +media-query($on-laptop)
-
-        h2
-            font-size: 28px
-
-        h3
-            font-size: 22px
-
-        h4
-            font-size: 18px
-
+    .empresa-aside

@@ -1,6 +1,77 @@
 ---
 layout: default
+sections:
+  - title: Início
+    href : #topo
+  - title: Empresa
+    href : #empresa
+  - title: Serviços
+    href : #servicos
+  - title: Contato
+    href : #contato
 ---
 
-{% include section/intro.html %}
+<section class="section-hero">
+  <div class="wrapper" data-grid="center spacing">
+    <div data-cell="1of3" class="hero-img">
+      <img src="{{ '/img/Server.png' | prepend: site.baseurl }}" alt="servidor">
+    </div>
+    <div data-cell="1of3" class="hero-heading">
+      <h2 class="hero-title">{{ site.title }}</h2>
+      <p>Instalação, manutenção e configuração de dispositivos e redes.</p>
+    </div>
+    <div data-cell="1of3" class="hero-aside">
+      <h3 class="hero-title">Nosso parceiro:</h3>
+      <img src="{{ '/img/Logo-BONSAITES.png' | prepend: site.baseurl }}" alt="Parceiro: BonSaiTes Marketing Digital">
+    </div>
+  </div>
+</section>
 
+<section class="page-content first section-empresa" id="empresa">
+  <div class="wrapper" data-grid="spacing">
+    <div data-cell="2of3">
+      <h2>Sobre a JCR Informática</h2>
+      <p>Somos uma empresa de soluções em TI completa e apaixonada pela evolução tecnológica. Formamos uma equipe técnica selecionada e qualificada com muito cuidado e atenção, com o preparo para apresentar sempre as melhores soluções para cuidar da sua empresa.</p>
+      
+      <div data-grid="row nowrap spacing">
+        <div data-cell=""><img src="{{ '/img/Windows-Server-2003.jpg' | prepend: site.baseurl }}" alt="Windows Server 2003"></div>
+        <div data-cell=""><img src="{{ '/img/Windows-Server-2008.jpg' | prepend: site.baseurl }}" alt="Windows Server 2008"></div>
+        <div data-cell=""><img src="{{ '/img/Windows-Server-2012.jpg' | prepend: site.baseurl }}" alt="Windows Server 2012"></div>
+      </div>
+
+      <h2>Nossa história</h2>
+      <p>A JCR Informática surgiu em 2 de novembro de 2012. Dois irmãos uniram sua experiência de mais de 11 anos na área de TI com o interesse de atender o mercado carente de profissionais competentes. De início oferecíamos somente pequenos serviços aos consumidores finais com manutenção em todos os tipos de equipamentos de informática, como computadores, monitores e impressoras.</p>
+      <p>Hoje a JCR Informática acrescentou em sua gama de serviços a consultoria técnica empresarial, soluções de redes de computadores, firewall e assistência técnica especializada.</p>
+
+    </div>
+
+    <aside data-cell="1of3" class="empresa-aside color-positive">
+      <h2>Serviços</h2>
+      
+      <ul>
+        <li>Servidores 2012 / 2008 / 2003;</li>
+        <li>Active directory, Controle de Acessos;</li>
+        <li>Servidores Firewall;</li>
+        <li>Servidores de Backup;</li>
+        <li>Manutenção em Computadores, Notebooks, Monitores, Impressoras;</li>
+        <li>Manutenção em No-Breaks, Estabilizadores;</li>
+        <li>Infra-Estrutura, Cabeamento, Wireless</li>
+      </ul>
+    
+    </aside>
+  </div>
+</section>
+
+<section class="page-content" id="servicos">
+  <div class="wrapper">
+    <h2>Sobre os nossos serviços</h2>
+    <p></p>
+  </div>
+</section>
+
+<section class="page-content last" id="contato">
+  <div class="wrapper">
+    <h2>Fale conosco</h2>
+    <p></p>
+  </div>
+</section>
