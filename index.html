@@ -2,13 +2,13 @@
 layout: default
 sections:
   - title: Início
-    href : #topo
+    href : '#topo'
   - title: Empresa
-    href : #empresa
+    href : '#empresa'
   - title: Serviços
-    href : #servicos
+    href : '#servicos'
   - title: Contato
-    href : #contato
+    href : '#contato'
 ---
 
 <section class="section-hero">
@@ -22,15 +22,15 @@ sections:
     </div>
     <div data-cell="1of3" class="hero-aside">
       <h3 class="hero-title">Nosso parceiro:</h3>
-      <img src="{{ '/img/Logo-BONSAITES.png' | prepend: site.baseurl }}" alt="Parceiro: BonSaiTes Marketing Digital">
+      <a href="#"><img src="{{ '/img/Logo-BONSAITES.png' | prepend: site.baseurl }}" alt="Parceiro: BonSaiTes Marketing Digital"></a>
     </div>
   </div>
 </section>
 
 <section class="page-content first section-empresa" id="empresa">
-  <div class="wrapper" data-grid="spacing">
+  <div class="wrapper" data-grid="spacing start">
     <div data-cell="2of3">
-      <h2>Sobre a JCR Informática</h2>
+      <h2>Sobre nós</h2>
       <p>Somos uma empresa de soluções em TI completa e apaixonada pela evolução tecnológica. Formamos uma equipe técnica selecionada e qualificada com muito cuidado e atenção, com o preparo para apresentar sempre as melhores soluções para cuidar da sua empresa.</p>
       
       <div data-grid="row nowrap spacing">
@@ -39,9 +39,13 @@ sections:
         <div data-cell=""><img src="{{ '/img/Windows-Server-2012.jpg' | prepend: site.baseurl }}" alt="Windows Server 2012"></div>
       </div>
 
+      <div class="call-to-action">
+        <p><a href="#contato" data-btn="big">Fale conosco</a></p>
+      </div>
+
       <h2>Nossa história</h2>
-      <p>A JCR Informática surgiu em 2 de novembro de 2012. Dois irmãos uniram sua experiência de mais de 11 anos na área de TI com o interesse de atender o mercado carente de profissionais competentes. De início oferecíamos somente pequenos serviços aos consumidores finais com manutenção em todos os tipos de equipamentos de informática, como computadores, monitores e impressoras.</p>
-      <p>Hoje a JCR Informática acrescentou em sua gama de serviços a consultoria técnica empresarial, soluções de redes de computadores, firewall e assistência técnica especializada.</p>
+      <p>A JCR Informática surgiu em 2 de novembro de 2012. Dois irmãos uniram sua experiência de mais de 11 anos na área de TI, com o interesse de atender o mercado carente de profissionais competentes. De início oferecíamos somente pequenos serviços aos consumidores finais com manutenção em todos os tipos de equipamentos de informática, como computadores, monitores e impressoras.</p>
+      <p>Hoje a JCR Informática acrescentou em sua gama abrangente de serviços de TI a consultoria técnica empresarial, soluções de redes de computadores, firewall e assistência técnica especializada.</p>
 
     </div>
 
@@ -50,28 +54,68 @@ sections:
       
       <ul>
         <li>Servidores 2012 / 2008 / 2003;</li>
-        <li>Active directory, Controle de Acessos;</li>
+        <li>Active Directory, controle de acessos;</li>
         <li>Servidores Firewall;</li>
         <li>Servidores de Backup;</li>
-        <li>Manutenção em Computadores, Notebooks, Monitores, Impressoras;</li>
-        <li>Manutenção em No-Breaks, Estabilizadores;</li>
-        <li>Infra-Estrutura, Cabeamento, Wireless</li>
+        <li>Manutenção em computadores, notebooks, monitores, impressoras;</li>
+        <li>Manutenção em no-breaks e estabilizadores;</li>
+        <li>Infraestrutura, cabeamento, wireless;</li>
+        <li><a href="#servicos">Leia mais...</a></li>
       </ul>
     
     </aside>
   </div>
 </section>
 
-<section class="page-content" id="servicos">
+<section class="page-content last" id="servicos">
   <div class="wrapper">
     <h2>Sobre os nossos serviços</h2>
-    <p></p>
+
+    <h3>Servidores</h3>
+    <p>Windows Server é uma família de sistemas operacionais Microsoft Windows baseados na arquitetura NT, direcionada para uso em servidores. Fornece os recursos de nuvem privada e híbrida necessários para atender rapidamente os requisitos de negócios.</p>
+
+    <div class="call-to-action">
+      <p><a href="#contato" data-btn>Solicite um serviço</a></p>
+    </div>
+
+    <h3>Active Directory e controle de acessos</h3>
+    <p>Peça fundamental no Windows Server, o serviço de diretórios da Microsoft facilita vida do administrador da rede.</p>
+    <blockquote>
+      <p>O Active Directory é uma implementação de serviço de diretório no protocolo LDAP que armazena informações sobre objetos e as disponibiliza a usuários e administradores de uma rede.</p>
+      <p><small>&#8212; Wikipedia</small></p>
+    </blockquote>
+    <p>Active Directory, o serviço de diretório da Microsoft, foi introduzido em 1996 no Windows 2000 Server Edition, mas foi a partir do lançamento do Windows Server 2003 que ele realmente ganhou vigor. Representa uma das mais importantes facilidades do Windows Server 2003. É composto por um conjunto de ferramentas para o armazenamento e controle de informações sobre toda a configuração da rede, incluindo dispositivos e usuários.</p>
+
+    <h3>Firewall e Backup</h3>
+    <p>Um firewall é um dispositivo de uma rede de computadores que tem por objetivo aplicar uma política de segurança a um determinado ponto de rede. Os firewalls são geralmente associados a redes TCP-IP.</p>
+    <p>Este dispositivo de segurança pode existir na forma de software e de hardware. A combinação de ambos normalmente é chamado de appliance. A complexidade de instalação depende do tamanho da rede, da política de segurança, da quantidade de regras que controlam o fluxo de entrada e saída de informações e do grau de segurança desejado.</p>
+    <p><strong>Servidores de backup:</strong> Nos dias de hoje, onde o papel é cada vez mais substituído por mídias digitais, é essencial para as empresas possuirem um sistema de backups confiável. A JCR tem um portifólio completo de soluções de segurança para proteger seus dados, inclusive backup.</p>
+
+    <h3>Manutenção de hardware</h3>
+    <p>Garantimos à sua empresa o suporte completo de manutenção e reparos em computadores desktop, notebooks, monitores, impressoras, no-breaks e estabilizadores.</p>
+
+    <h3>Infraestrutura</h3>
+    <p>Fazemos toda a infraestrutura, desde cabeamento com padrões de instalação, até redes sem fio (wireless). Há diversos tipos de cabos que podem atender às várias necessidades e tamanhos de redes, de pequenas redes domésticas até grandes sistemas corporativos.</p>
+    <ul>
+      <li>Coaxial (fino e grosso);</li>
+      <li>Par trançado (blindado e não blindado);</li>
+      <li>Fibra óptica (mono e multi-modo)</li>
+    </ul>
+    <p>* A compreensão das diferentes aplicações de cabos é que determina quando utilizar cada tipo.</p>
+
+
   </div>
 </section>
 
-<section class="page-content last" id="contato">
+<section class="page-content only" id="contato">
   <div class="wrapper">
     <h2>Fale conosco</h2>
-    <p></p>
+    <form action="" method="post">
+      <p><label for="nome">Nome</label><input type="text" name="nome" placeholder="Informe seu nome"></p>
+      <p><label for="email">E-mail</label><input type="email" name="email" placeholder="seuemail@dominio.com"></p>
+      <p><label for="assunto">Assunto</label><input type="text" name="assunto" placeholder="Solicitação/orçamento/dúvida/etc"></p>
+      <p><label for="msg">Mensagem</label><textarea name="msg" cols="30" rows="10" placeholder="Deixe sua mensagem..."></textarea></p>
+      <p><button data-btn>Enviar</button></p>
+    </form>
   </div>
 </section>

@@ -71,18 +71,21 @@ li
 h1, h2, h3, h4, h5, h6 
     font-weight: $base-font-weight
 
+@for $i from 1 through 6
+    h#{$i}
+        font-size: $base-font-size * ( 6 / $i )
+
+
 
 /**
  * Links
  */
 a 
-    color: $brand-color
     text-decoration: none
-    &:visited 
-        color: darken($brand-color, 15%)
-    
-    &:hover 
-        color: $text-color
+    color: darken($brand-color, 20%)
+
+    &:hover, &:focus
+        color: $brand-color
         text-decoration: underline
     
 
@@ -94,12 +97,16 @@ blockquote
     color: $grey-color
     border-left: 4px solid $grey-color-light
     padding-left: $spacing-unit / 2
-    font-size: 18px
-    letter-spacing: -1px
+
     font-style: italic
     > :last-child 
         margin-bottom: 0
-    
+
+
+hr
+    border-style: none none solid
+    margin: $spacing-unit auto
+    max-width: 80%
 
 
 /**
@@ -123,7 +130,7 @@ pre
         border: 0
         padding-right: 0
         padding-left: 0
-    
+
 
 
 /**
@@ -164,5 +171,41 @@ pre
         vertical-align: middle
         path 
             fill: $grey-color
-        
+
+
+.call-to-action
+    margin: $spacing-unit * 2 auto
+    text-align: center
     
+
++module(btn)
+    display: inline-block
+    padding: .3em 1em
+    border: none
+    border-radius: $spacing-unit * 10
+    text-decoration: none
+    background-color: $brand-color
+    color: #fff
+    text-transform: uppercase
+    box-shadow: none
+    transition: .4s cubic-bezier(0, .5, 0.5, 2)
+    transform: translate(0)
+
+    &:visited, &:hover
+        color: #fff
+        text-decoration: none
+
+    &:hover, &:focus
+        box-shadow: 0 0 0 3px #fff, 0 0 0 8px $brand-color
+        text-decoration: none
+        outline: none
+
+    +variant(big)
+        font-size: 1.2em
+        padding: .5em 1.2em
+
+
+
+
+
+
