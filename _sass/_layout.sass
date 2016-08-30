@@ -28,6 +28,10 @@
         width: auto
         margin-right: $spacing-unit / 4
 
+    +media-query($content-width)
+        small
+            display: none
+
 .site-nav
     float: right
     line-height: 56px
@@ -90,6 +94,9 @@
         color: $grey-color-light
         padding: $spacing-unit
 
+        +media-query($on-laptop)
+            padding: $spacing-unit / 2
+
         h1, h2, h3, h4, h5, h6
             color: $grey-color
             font-family: 'Eras Bold ITC', sans-serif
@@ -148,6 +155,7 @@
         color: $grey-color-dark
         padding: $spacing-unit / 2
         border-radius: $spacing-unit / 4
+        box-shadow: 0 5px 15px -10px $grey-color-dark
 
         +media-query($on-palm)
             align-self: stretch
