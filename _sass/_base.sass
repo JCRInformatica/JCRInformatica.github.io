@@ -58,10 +58,10 @@ figcaption
  * Lists
  */
 ul, ol 
-    margin-left: 1em
+    margin-left: $spacing-unit / 2
 
 
-li 
+li
     > ul,     > ol 
         margin-bottom: 0
     
@@ -76,6 +76,11 @@ h1, h2, h3, h4, h5, h6
 @for $i from 1 through 6
     h#{$i}
         font-size: $base-font-size * ( 6 / $i )
+
+        @if $i < 5
+
+            +media-query($content-width)
+                font-size: $base-font-size * ( 4 / $i )
 
 
 

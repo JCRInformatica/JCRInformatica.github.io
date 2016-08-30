@@ -28,81 +28,126 @@ sections:
 </section>
 
 <section class="page-content first section-empresa" id="empresa">
-  <div class="wrapper" data-grid="spacing start">
-    <div data-cell="2of3">
-      <h2>Sobre nós</h2>
-      <p>Somos uma empresa de soluções em TI completa e apaixonada pela evolução tecnológica. Formamos uma equipe técnica selecionada e qualificada com muito cuidado e atenção, com o preparo para apresentar sempre as melhores soluções para cuidar da sua empresa.</p>
+  <div class="wrapper">
+
+    <div data-grid="spacing start">
+      <article data-cell="2of3">
+        <h2>Sobre nós</h2>
+        <p>Somos uma empresa de soluções em TI completa e apaixonada pela evolução tecnológica. Formamos uma equipe técnica selecionada e qualificada com muito cuidado e atenção, com o preparo para apresentar sempre as melhores soluções para cuidar da sua empresa.</p>
+        
+        <div data-grid="row nowrap spacing">
+          <div data-cell=""><img src="{{ '/img/Windows-Server-2003.jpg' | prepend: site.baseurl }}" alt="Windows Server 2003"></div>
+          <div data-cell=""><img src="{{ '/img/Windows-Server-2008.jpg' | prepend: site.baseurl }}" alt="Windows Server 2008"></div>
+          <div data-cell=""><img src="{{ '/img/Windows-Server-2012.jpg' | prepend: site.baseurl }}" alt="Windows Server 2012"></div>
+        </div>
       
-      <div data-grid="row nowrap spacing">
-        <div data-cell=""><img src="{{ '/img/Windows-Server-2003.jpg' | prepend: site.baseurl }}" alt="Windows Server 2003"></div>
-        <div data-cell=""><img src="{{ '/img/Windows-Server-2008.jpg' | prepend: site.baseurl }}" alt="Windows Server 2008"></div>
-        <div data-cell=""><img src="{{ '/img/Windows-Server-2012.jpg' | prepend: site.baseurl }}" alt="Windows Server 2012"></div>
-      </div>
-
-      <div class="call-to-action">
-        <p><a href="#contato" data-btn="big">Fale conosco</a></p>
-      </div>
-
-      <h2>Nossa história</h2>
-      <p>A JCR Informática surgiu em 2 de novembro de 2012. Dois irmãos uniram sua experiência de mais de 11 anos na área de TI, com o interesse de atender o mercado carente de profissionais competentes. De início oferecíamos somente pequenos serviços aos consumidores finais com manutenção em todos os tipos de equipamentos de informática, como computadores, monitores e impressoras.</p>
-      <p>Hoje a JCR Informática acrescentou em sua gama abrangente de serviços de TI a consultoria técnica empresarial, soluções de redes de computadores, firewall e assistência técnica especializada.</p>
-
+        <div class="call-to-action">
+          <p><a href="#contato" data-btn="big">Fale conosco</a></p>
+        </div>
+      
+      </article>
+      
+      <aside data-cell="1of3" class="empresa-aside color-positive">
+        <h2>Serviços</h2>
+        
+        <ul>
+          <li>Servidores 2012 / 2008 / 2003;</li>
+          <li>Active Directory, controle de acessos;</li>
+          <li>Servidores Firewall;</li>
+          <li>Servidores de Backup;</li>
+          <li>Manutenção em computadores, notebooks, monitores, impressoras;</li>
+          <li>Manutenção em no-breaks e estabilizadores;</li>
+          <li>Infraestrutura, cabeamento, wireless;</li>
+          <li><a href="#servicos">Leia mais...</a></li>
+        </ul>
+      
+      </aside>
     </div>
 
-    <aside data-cell="1of3" class="empresa-aside color-positive">
-      <h2>Serviços</h2>
-      
-      <ul>
-        <li>Servidores 2012 / 2008 / 2003;</li>
-        <li>Active Directory, controle de acessos;</li>
-        <li>Servidores Firewall;</li>
-        <li>Servidores de Backup;</li>
-        <li>Manutenção em computadores, notebooks, monitores, impressoras;</li>
-        <li>Manutenção em no-breaks e estabilizadores;</li>
-        <li>Infraestrutura, cabeamento, wireless;</li>
-        <li><a href="#servicos">Leia mais...</a></li>
-      </ul>
-    
-    </aside>
+    <article>
+      <h2>Nossa história</h2>
+      <div data-grid="">
+        <div data-cell="2of3">
+          <p>A JCR Informática surgiu em 2 de novembro de 2012. Dois irmãos uniram sua experiência de mais de 11 anos na área de TI, com o interesse de atender o mercado carente de profissionais competentes. De início oferecíamos somente pequenos serviços aos consumidores finais com manutenção em todos os tipos de equipamentos de informática, como computadores, monitores e impressoras.</p>
+          <p>Hoje a JCR Informática acrescentou em sua gama abrangente de serviços de TI a consultoria técnica empresarial, soluções de redes de computadores, firewall e assistência técnica especializada.</p>
+        </div>
+        <div data-cell="1of3"><img src="/img/icons/macintosh.png" alt="computador antigo"></div>
+      </div>
+    </article>
+
   </div>
 </section>
 
-<section class="page-content last" id="servicos">
+<section class="page-content last section-servicos" id="servicos">
   <div class="wrapper">
     <h2>Sobre os nossos serviços</h2>
 
-    <h3>Servidores</h3>
-    <p>Windows Server é uma família de sistemas operacionais Microsoft Windows baseados na arquitetura NT, direcionada para uso em servidores. Fornece os recursos de nuvem privada e híbrida necessários para atender rapidamente os requisitos de negócios.</p>
+    <article data-grid="center spacing">
+      <div data-cell="1of3" class="figure"><img src="/img/icons/database-1.png" alt="Servidores"></div>
+      <div data-cell="2of3">
+        <h3>Servidores</h3>
+        <p>Windows Server é uma família de sistemas operacionais Microsoft Windows baseados na arquitetura NT, direcionada para uso em servidores. Fornece os recursos de nuvem privada e híbrida necessários para atender rapidamente os requisitos de negócios.</p>
 
-    <div class="call-to-action">
-      <p><a href="#contato" data-btn>Solicite um serviço</a></p>
-    </div>
+        <div class="call-to-action">
+          <p><a href="#contato" data-btn>Solicite um serviço</a></p>
+        </div>
+      </div>
+    </article>
 
-    <h3>Active Directory e controle de acessos</h3>
-    <p>Peça fundamental no Windows Server, o serviço de diretórios da Microsoft facilita vida do administrador da rede.</p>
-    <blockquote>
-      <p>O Active Directory é uma implementação de serviço de diretório no protocolo LDAP que armazena informações sobre objetos e as disponibiliza a usuários e administradores de uma rede.</p>
-      <p><small>&#8212; Wikipedia</small></p>
-    </blockquote>
-    <p>Active Directory, o serviço de diretório da Microsoft, foi introduzido em 1996 no Windows 2000 Server Edition, mas foi a partir do lançamento do Windows Server 2003 que ele realmente ganhou vigor. Representa uma das mais importantes facilidades do Windows Server 2003. É composto por um conjunto de ferramentas para o armazenamento e controle de informações sobre toda a configuração da rede, incluindo dispositivos e usuários.</p>
+    <article data-grid="center spacing">
+      <div data-cell="1of3" class="figure"><img src="/img/icons/server.png" alt="Controle de acessos"></div>
+      <div data-cell="2of3">
+        <h3>Active Directory e controle de acessos</h3>
+        <p>Peça fundamental no Windows Server, o serviço de diretórios da Microsoft facilita vida do administrador da rede.</p>
+        <blockquote>
+          <p>O Active Directory é uma implementação de serviço de diretório no protocolo LDAP que armazena informações sobre objetos e as disponibiliza a usuários e administradores de uma rede.</p>
+          <p><small>&#8212; Wikipedia</small></p>
+        </blockquote>
+        <p>Active Directory, o serviço de diretório da Microsoft, foi introduzido em 1996 no Windows 2000 Server Edition, mas foi a partir do lançamento do Windows Server 2003 que ele realmente ganhou vigor. Representa uma das mais importantes facilidades do Windows Server 2003. É composto por um conjunto de ferramentas para o armazenamento e controle de informações sobre toda a configuração da rede, incluindo dispositivos e usuários.</p>
+      </div>
+    </article>
 
-    <h3>Firewall e Backup</h3>
-    <p>Um firewall é um dispositivo de uma rede de computadores que tem por objetivo aplicar uma política de segurança a um determinado ponto de rede. Os firewalls são geralmente associados a redes TCP-IP.</p>
-    <p>Este dispositivo de segurança pode existir na forma de software e de hardware. A combinação de ambos normalmente é chamado de appliance. A complexidade de instalação depende do tamanho da rede, da política de segurança, da quantidade de regras que controlam o fluxo de entrada e saída de informações e do grau de segurança desejado.</p>
-    <p><strong>Servidores de backup:</strong> Nos dias de hoje, onde o papel é cada vez mais substituído por mídias digitais, é essencial para as empresas possuirem um sistema de backups confiável. A JCR tem um portifólio completo de soluções de segurança para proteger seus dados, inclusive backup.</p>
+    <article data-grid="center spacing">
+      <div data-cell="1of3" class="figure"><img src="/img/icons/firewall.png" alt="Firewall"></div>
+      <div data-cell="2of3">
+        <h3>Firewall e Backup</h3>
+        <p>Um firewall é um dispositivo de uma rede de computadores que tem por objetivo aplicar uma política de segurança a um determinado ponto de rede. Os firewalls são geralmente associados a redes TCP-IP.</p>
+        <p>Este dispositivo de segurança pode existir na forma de software e de hardware. A combinação de ambos normalmente é chamado de appliance. A complexidade de instalação depende do tamanho da rede, da política de segurança, da quantidade de regras que controlam o fluxo de entrada e saída de informações e do grau de segurança desejado.</p>
+        <p><strong>Servidores de backup:</strong> Nos dias de hoje, onde o papel é cada vez mais substituído por mídias digitais, é essencial para as empresas possuirem um sistema de backups confiável. A JCR tem um portifólio completo de soluções de segurança para proteger seus dados, inclusive backup.</p>
+      </div>
+    </article>
 
-    <h3>Manutenção de hardware</h3>
-    <p>Garantimos à sua empresa o suporte completo de manutenção e reparos em computadores desktop, notebooks, monitores, impressoras, no-breaks e estabilizadores.</p>
+    <article data-grid="center spacing">
+      <div data-cell="1of3" class="figure"><img src="/img/icons/sound-card.png" alt="Hardware"></div>
+      <div data-cell="2of3">
+        <h3>Manutenção de hardware</h3>
+        <div data-grid="row nowrap spacing">
+          <div data-cell=""><img src="/img/icons/laptop.png" alt="notebooks"></div>
+          <div data-cell=""><img src="/img/icons/printer.png" alt="impressoras"></div>
+          <div data-cell=""><img src="/img/icons/video-card.png" alt="placas"></div>
+        </div>
+        <p>Garantimos à sua empresa o suporte completo de manutenção e reparos em computadores desktop, notebooks, monitores, impressoras, no-breaks e estabilizadores.</p>
+      </div>
+    </article>
 
-    <h3>Infraestrutura</h3>
-    <p>Fazemos toda a infraestrutura, desde cabeamento com padrões de instalação, até redes sem fio (wireless). Há diversos tipos de cabos que podem atender às várias necessidades e tamanhos de redes, de pequenas redes domésticas até grandes sistemas corporativos.</p>
-    <ul>
-      <li>Coaxial (fino e grosso);</li>
-      <li>Par trançado (blindado e não blindado);</li>
-      <li>Fibra óptica (mono e multi-modo)</li>
-    </ul>
-    <p>* A compreensão das diferentes aplicações de cabos é que determina quando utilizar cada tipo.</p>
-
+    <article data-grid="center spacing">
+      <div data-cell="1of3" class="figure"><img src="/img/icons/network.png" alt="redes"></div>
+      <div data-cell="2of3">
+        <h3>Infraestrutura</h3>
+        <p>Fazemos toda a infraestrutura, desde cabeamento com padrões de instalação, até redes sem fio (wireless). Há diversos tipos de cabos que podem atender às várias necessidades e tamanhos de redes, de pequenas redes domésticas até grandes sistemas corporativos.</p>
+        <div data-grid="">
+          <div data-cell>
+            <ul>
+              <li>Coaxial (fino e grosso);</li>
+              <li>Par trançado (blindado e não blindado);</li>
+              <li>Fibra óptica (mono e multi-modo)</li>
+            </ul>
+            <p>* A compreensão das diferentes aplicações de cabos é que determina quando utilizar cada tipo.</p>
+          </div>
+          <div data-cell><img src="/img/icons/hdmi.png" alt="cabos"></div>
+        </div>
+      </div>
+    </article>
 
   </div>
 </section>
