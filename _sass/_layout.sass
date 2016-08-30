@@ -41,18 +41,22 @@
         line-height: $base-line-height
         padding: 0 1em
         transition: .3s ease-in-out
+
     +media-greater($on-palm)
+
         .page-link
             &:hover, &:focus
                 padding-top: 20px
                 padding-bottom: 20px
                 background-color: $grey-color-light
+
     +media-query($on-palm)
         position: absolute
         top: 9px
         right: $spacing-unit / 2
         border-radius: 5px
         text-align: right
+
         .menu-icon
             display: block
             float: right
@@ -69,14 +73,24 @@
         .trigger
             clear: both
             display: none
-            opacity: 0
-            transition: opacity .5s ease-in-out
         &:hover .trigger
             display: block
-            padding-top: 5px
-            padding-bottom: 5px
+            padding: $spacing-unit / 2
             background-color: #fff
-            opacity: 1
+            border-radius: $spacing-unit / 4
+            box-shadow: 0 5px 15px -10px $grey-color
+            overflow: hidden
+
+            @for $i from 1 through 10
+                a:nth-of-type(#{$i})
+                    animation: page-link-enter .15s * $i ease-in-out
+
+            @keyframes page-link-enter
+                0%
+                    transform: translate(100px)
+                100%
+                    transform: translate(0px)
+
         .page-link
             display: block
             padding: 5px 10px
@@ -176,6 +190,9 @@
 .site-footer
     padding-top: $spacing-unit
     padding-bottom: $spacing-unit
+
+    .footer-heading
+        font-size: 1.2em
 
     ul
         margin: 0
