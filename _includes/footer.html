@@ -5,11 +5,9 @@
     <h2 class="footer-heading">{{ site.title }}</h2>
 
     <div data-grid="center spacing">
-      <div data-cell="1of2">
+      <div data-cell="1of2" class="share-heading">
         <p><strong>Compartilhe</strong></p>
-        <ul>
-          <li>Redes sociais</li>
-        </ul>
+        {% include share/widget.html position='rodape' %}
       </div>
       
       <div data-cell="1of2">

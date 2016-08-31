@@ -1,4 +1,5 @@
 
+
 .site-header
     min-height: 56px
     background-color: #fff
@@ -38,11 +39,12 @@
     .menu-icon
         display: none
     .page-link
-        line-height: $base-line-height
+        line-height: 56px
         padding: 0 1em
         transition: .3s ease-in-out
 
     +media-greater($on-palm)
+        overflow: hidden // Vazamento do :hover->padding em alguns navegadores
 
         .page-link
             &:hover, &:focus
@@ -52,7 +54,7 @@
 
     +media-query($on-palm)
         position: absolute
-        top: 9px
+        top: 0
         right: $spacing-unit / 2
         border-radius: 5px
         text-align: right
@@ -61,9 +63,9 @@
             display: block
             float: right
             width: 36px
-            height: 26px
-            line-height: 0
-            padding-top: 10px
+            height: 36px
+            line-height: 1
+            padding-top: 20px
             text-align: center
             > svg
                 width: 18px
@@ -94,9 +96,6 @@
         .page-link
             display: block
             padding: 5px 10px
-            &:not(:last-child)
-                margin-right: 0
-            margin-left: 20px
 
 
 
@@ -181,7 +180,22 @@
 
 .section-empresa
 
-    .empresa-aside
+    +media-query($on-laptop)
+        .empresa-sobre
+            flex-direction: column
+            .empresa-excerpt
+                margin-right: 0
+            .empresa-figure
+                max-height: 120px
+            > *
+                flex-basis: auto
+
+    +media-greater($on-palm)
+        .historia-figure
+            order: 1
+            margin-right: 0
+            margin-left: $spacing-unit
+
 
 .section-servicos
 
