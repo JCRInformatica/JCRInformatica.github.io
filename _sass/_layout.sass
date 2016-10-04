@@ -1,7 +1,7 @@
 
 
 .site-header
-    min-height: 56px
+    height: 56px
     background-color: #fff
     color: $grey-color
     // Positioning context for the mobile navigation icon
@@ -25,9 +25,15 @@
     padding-right: $spacing-unit / 4
 
     img
-        height: 80%
         width: auto
+        height: 91px
+        margin-top: 4px
         margin-right: $spacing-unit / 4
+        transition: 1s .5s ease-in-out
+        transform-origin: top left
+        transform: scale(.5)
+        &.initial
+            transform: scale(1)
 
     +media-query($content-width)
         small

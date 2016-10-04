@@ -197,6 +197,7 @@ pre
 
 
 
+
 .share-heading
     text-align: center
 
@@ -211,7 +212,6 @@ pre
         border: none
         border-radius: 500px
         color: #fff
-        transition: .4s cubic-bezier(0, 1, 0.5, 2)
 
         &:hover, &:focus
             color: #fff
@@ -223,30 +223,15 @@ pre
                 fill: currentcolor
 
     .btn-fb
-        background-color: #3b5998
-        &:hover, &:focus
-            transform: translateY(0)
-            box-shadow: 0 0 0 3px #fff, 0 0 0 8px #3b5998
+        +btn-shadow(#3b5998)
     .btn-tw
-        background-color: #00aced
-        &:hover, &:focus
-            transform: translateY(0)
-            box-shadow: 0 0 0 3px #fff, 0 0 0 8px #00aced
+        +btn-shadow(#00aced)
     .btn-li
-        background-color: #007bb5
-        &:hover, &:focus
-            transform: translateY(0)
-            box-shadow: 0 0 0 3px #fff, 0 0 0 8px #007bb5
+        +btn-shadow(#007bb5)
     .btn-gp
-        background-color: #dd4b39
-        &:hover, &:focus
-            transform: translateY(0)
-            box-shadow: 0 0 0 3px #fff, 0 0 0 8px #dd4b39
+        +btn-shadow(#dd4b39)
     .btn-wa
-        background-color: #43d854
-        &:hover, &:focus
-            transform: translateY(0)
-            box-shadow: 0 0 0 3px #fff, 0 0 0 8px #43d854
+        +btn-shadow(#43d854)
 
 
 
@@ -257,19 +242,15 @@ pre
     border: none
     border-radius: $spacing-unit * 10
     text-decoration: none
-    background-color: $brand-color
     color: #fff
     text-transform: uppercase
-    box-shadow: none
-    transition: .4s cubic-bezier(0, 1, 0.5, 2)
-    transform: translate(0)
+    +btn-shadow($brand-color)
 
     &:visited, &:hover, &:active
         color: #fff
         text-decoration: none
 
     &:hover, &:focus
-        box-shadow: 0 0 0 3px #fff, 0 0 0 8px $brand-color
         text-decoration: none
         outline: none
 
