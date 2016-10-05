@@ -1,25 +1,10 @@
 <footer class="site-footer">
 
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div data-grid="center spacing">
-      <div data-cell="1of2" class="share-heading">
-        <p><strong>Compartilhe</strong></p>
-        {% include share/widget.html position='rodape' %}
-      </div>
-      
-      <div data-cell="1of2">
-        <p>{{ site.description }}</p>
-      </div>
-    </div>
-
+  <div class="wrapper" data-grid="column center spacing">
+    <p class="share-heading"><strong>Compartilhe</strong></p>
+    {% include share/widget.html position='rodape' %}
   </div>
 
 </footer>
 
 
-
-<script src="{{ '/js/scroll.js' | prepend: site.baseurl }}"></script>
-<script src="{{ '/js/main.js' | prepend: site.baseurl }}"></script>
