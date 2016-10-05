@@ -22,22 +22,27 @@
     height: 56px
     line-height: 56px
     float: left
-    padding-right: $spacing-unit / 4
+    +media-query($on-palm)
+        padding-right: $spacing-unit / 4
 
     img
         width: auto
         height: 91px
         margin-top: 4px
-        margin-right: $spacing-unit / 4
         transition: 1s .5s ease-in-out
         transform-origin: top left
         transform: scale(.5)
         &.initial
             transform: scale(1)
 
-    +media-query($content-width)
-        small
-            display: none
+    +media-greater($on-palm)
+        position: absolute
+        top: 0
+        left: 50%
+        width: 200px
+        margin-left: -100px
+        img
+            transform-origin: top center
 
 .site-nav
     float: right
@@ -51,12 +56,18 @@
 
     +media-greater($on-palm)
         overflow: hidden // Vazamento do :hover->padding em alguns navegadores
+        width: 100%
+        text-align: center
 
         .page-link
             &:hover, &:focus
-                padding-top: 20px
-                padding-bottom: 20px
                 background-color: $grey-color-dark
+
+        .trigger
+            & :nth-child(2)
+                margin-right: 150px
+            & :nth-child(3)
+                margin-left: 150px
 
     +media-query($on-palm)
         position: absolute
@@ -71,26 +82,28 @@
             width: 36px
             height: 36px
             line-height: 1
-            padding-top: 20px
+            padding: 20px 0 30px
             text-align: center
             > svg
                 width: 18px
                 height: 15px
+                color: inherit
                 path
-                    fill: $grey-color-dark
+                    fill: currentcolor
         .trigger
             clear: both
             display: none
         &:hover .trigger
-            display: block
-            padding: $spacing-unit / 2
+            display: flex
+            padding: 0 $spacing-unit / 2
             background-color: #fff
+            color: $grey-color-dark
             border-radius: $spacing-unit / 4
             box-shadow: 0 5px 15px -10px $grey-color
             overflow: hidden
 
             @for $i from 1 through 10
-                a:nth-of-type(#{$i})
+                & :nth-of-type(#{$i})
                     animation: page-link-enter .15s * $i ease-in-out
 
             @keyframes page-link-enter
@@ -170,11 +183,11 @@
         font-size: 1.2em
 
     .hero-aside
-        background-color: $amarelo
         color: $grey-color-dark
         padding: $spacing-unit / 2
         border-radius: $spacing-unit / 4
-        box-shadow: 0 5px 15px -10px $grey-color-dark
+        // background-color: rgba($amarelo, .1)
+        // box-shadow: 0 5px 15px -10px $grey-color-dark
 
         +media-query($on-palm)
             align-self: stretch
