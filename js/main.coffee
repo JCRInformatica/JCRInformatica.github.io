@@ -40,13 +40,21 @@ isCSS1Compat = ((document.compatMode or "") is "CSS1Compat")
 logo = navbar.querySelector '.site-title img'
 logo.classList.add 'initial'
 
+scrollSpy = () ->
+	links = _( $('.site-nav .trigger .page-link') )
+	for link in links
+		id = link.getAttribute 'id'
+		if id
+			thisSection = $(id)[0]
+			console.log thisSection.getBoundingClientRect()
+
 onScroll = (e) ->
-	console.log window
 	y = if supportPageOffset then window.pageYOffset else if isCSS1Compat then document.documentElement.scrollTop else document.body.scrollTop
 	if y
 		logo.classList.remove 'initial'
 	else
 		logo.classList.add 'initial'
+	scrollSpy()
 
 
 window.addEventListener 'scroll', onScroll
