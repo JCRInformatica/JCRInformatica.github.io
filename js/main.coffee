@@ -42,11 +42,19 @@ logo.classList.add 'initial'
 
 scrollSpy = () ->
 	links = _( $('.site-nav .trigger .page-link') )
-	for link in links
-		id = link.getAttribute 'id'
-		if id
-			thisSection = $(id)[0]
-			console.log thisSection.getBoundingClientRect()
+	selectedHash = '#topo'
+
+	links.forEach (link) ->
+		thisSection = $(link.hash)[0]
+		bounds = thisSection.getBoundingClientRect()
+		if bounds.top <= window.innerHeight * .3 and bounds.bottom > 0
+			selectedHash = link.hash
+
+	links.forEach (link) ->
+		if link.hash is selectedHash
+			link.classList.add 'active'
+		else
+			link.classList.remove 'active'
 
 onScroll = (e) ->
 	y = if supportPageOffset then window.pageYOffset else if isCSS1Compat then document.documentElement.scrollTop else document.body.scrollTop
