@@ -174,13 +174,14 @@ sections:
 <section class="page-content only" id="contato">
   <div class="wrapper">
     <h2>Fale conosco</h2>
-    <form action="" method="post">
+    <form action="{{site.url}}{{site.baseurl}}/enviar_email.php" method="post">
       <div data-grid="spacing">
         <p data-cell="1of3"><label for="nome">Nome</label><input type="text" name="nome" placeholder="Informe seu nome" required></p>
         <p data-cell="2of3"><label for="email">E-mail</label><input type="email" name="email" placeholder="seuemail@dominio.com" required></p>
       </div>
       <p><label for="assunto">Assunto</label><input type="text" name="assunto" placeholder="Solicitação/orçamento/dúvida/etc" required></p>
-      <p><label for="msg">Mensagem</label><textarea name="msg" cols="30" rows="5" placeholder="Deixe sua mensagem..."></textarea></p>
+      <p><label for="mensagem">Mensagem</label><textarea name="mensagem" cols="30" rows="5" placeholder="Deixe sua mensagem..."></textarea></p>
+      <p class="honeypot"><label for="honeypot">Se estiver vendo isto, deixe este campo vazio: </label><input type="text" name="honeypot"></p>
       <p><button data-btn>Enviar</button></p>
     </form>
   </div>

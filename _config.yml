@@ -5,7 +5,7 @@ description: >
   e qualificada com muito cuidado e atenção, com o preparo para 
   apresentar sempre as melhores soluções para cuidar da sua empresa.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://jcrinformatica.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown

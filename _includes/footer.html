@@ -1,10 +1,10 @@
 <footer class="site-footer">
-
+{% if page.layout != 'msg' %}
   <div class="wrapper" data-grid="column center spacing">
     <p class="share-heading"><strong>Compartilhe</strong></p>
     {% include share/widget.html position='rodape' %}
   </div>
-
+{% endif %}
 </footer>
 
 
