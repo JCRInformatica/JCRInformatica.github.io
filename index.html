@@ -173,7 +173,14 @@ sections:
 
 <section class="page-content only" id="contato">
   <div class="wrapper">
-    <h2>Fale conosco</h2>
+    <div data-grid="justify">
+      <div data-cell="shrink">
+        <h2>Fale conosco</h2>
+      </div>
+      <div data-cell="shrink">
+        <p><a href="tel:+551530352853" data-btn>Ligue: (15) 3035-2853</a></p>
+      </div>
+    </div>
     <form action="{{site.url}}{{site.baseurl}}/enviar_email.php" method="post">
       <div data-grid="spacing">
         <p data-cell="1of3"><label for="nome">Nome</label><input type="text" name="nome" placeholder="Informe seu nome" required></p>

@@ -7,8 +7,8 @@ if ($_POST['nome'] !== '' && $_POST['email'] !== '' && $_POST['assunto'] !== '' 
 	$assunto = $_POST['assunto'];
 	$mensagem = $_POST['mensagem'];
 
-	$email_remetente = "contato@" . $my_domain; // deve ser uma conta de email do seu dominio
-	$email_destinatario = "contato@johnylab.net"; // pode ser qualquer email que receberá as mensagens
+	$email_remetente = "contato@jcrinformatica.com"; // deve ser uma conta de email do seu dominio
+	$email_destinatario = "contato@jcrinformatica.com"; // pode ser qualquer email que receberá as mensagens
 	$email_reply = "$email";
 	$email_assunto = "Contato do site: $assunto"; // Este será o assunto da mensagem
 
