@@ -13,5 +13,8 @@ markdown: kramdown
 sass:
   style: compressed
 
-gems:
+plugins:
   - jekyll-coffeescript
+
+exclude:
+  - desktop.ini
