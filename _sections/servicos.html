@@ -1,0 +1,27 @@
+---
+title: Serviços
+hash: servicos
+position: 3
+---
+
+<div class="wrapper">
+  <h2>Sobre os nossos serviços</h2>
+
+  {% assign servicos = site.servicos | sort: 'position' %}
+
+  {% for serv in servicos %}
+    <article class="section-servicos__item page-content horizontal" id="{{serv.hash}}">
+      <div style="margin-right: 4.5%;">
+        <img src="{{serv.img}}" alt="{{serv.img_alt}}" width="160">
+      </div>
+
+      <div class="flex">
+        <h3 style="margin-top: 0;">
+          {{serv.title}}
+        </h3>
+
+        {{ serv.content | markdownify }}
+      </div>
+    </article>
+  {% endfor %}
+</div>

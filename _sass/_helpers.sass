@@ -1,0 +1,62 @@
+.page-content
+  padding: $spacing-unit 0
+
+.page-heading
+  font-size: 20px
+
+.wrapper
+  max-width: $content-width
+  margin-right: auto
+  margin-left: auto
+  padding-right: $spacing-unit
+  padding-left: $spacing-unit
+
+  @include media-query($on-laptop)
+    padding-right: $spacing-unit / 2
+    padding-left: $spacing-unit / 2
+
+.auto-grid
+  display: grid
+  grid-gap: var(--spacing, 24px)
+  grid-template-columns: repeat(auto-fit, minmax(var(--column-size, 200px), 1fr))
+
+.embed
+  position: relative
+  padding-bottom: 56%
+
+  iframe, object, embed, > *
+    position: absolute
+    width: 100%
+    height: 100%
+
+.icon, .icon-colored
+  display: inline-block
+
+  > svg
+    display: block
+    width: 1em
+    height: 1em
+    vertical-align: middle
+
+.icon
+  > svg
+    color: inherit
+    path
+      fill: currentcolor
+
+.circ
+  overflow: hidden
+  border-radius: 9999px
+
+.card
+  display: inline-block
+  background: $background-color
+  border-radius: 5px
+  overflow: hidden
+  box-shadow: 0 5px 25px 0 rgba(#000, .2)
+
+  > *
+    padding: $spacing-unit / 2
+
+    +media-query($on-palm)
+      padding: $spacing-unit / 4

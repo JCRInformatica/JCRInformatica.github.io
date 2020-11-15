@@ -1,264 +1,152 @@
+html
+  line-height: 1.15
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
 
-body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure 
-    margin: 0
-    padding: 0
+body, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, hr, dl, dd, ol, ul, figure
+  margin: 0
+  padding: 0
 
+body
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} sans-serif // Compatibilidade no IE
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family
+  color: $text-color
+  background-color: $background-color
+  -webkit-font-feature-settings: "kern" 1
+  -moz-font-feature-settings: "kern" 1
+  -o-font-feature-settings: "kern" 1
+  font-feature-settings: "kern" 1
+  font-kerning: normal
+  box-sizing: border-box
 
-/**
- * Basic styling
- */
-body 
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family
-    color: $text-color
-    -webkit-text-size-adjust: 100%
-    -webkit-font-feature-settings: "kern" 1
-    -moz-font-feature-settings: "kern" 1
-    -o-font-feature-settings: "kern" 1
-    font-feature-settings: "kern" 1
-    font-kerning: normal
+  *
+    box-sizing: inherit
 
-    box-sizing: border-box
-    background: $background-color url('../img/bg-grey-corte.jpg') no-repeat center top
-    background-size: 100% auto
-    +media-query($content-width)
-        background-size: contain
+  svg
+    > *
+      &:not([fill])
+        fill: currentcolor
 
-    * 
-        box-sizing: inherit
+h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, ul, ol, dl, figure,
+%vertical-rhythm
+  margin-top: $spacing-unit / 2
+  margin-bottom: $spacing-unit / 2
 
+img
+  max-width: 100%
+  vertical-align: middle
+  border-style: none // normalize.css
 
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, %vertical-rhythm 
-    margin-top: $spacing-unit / 2
-    margin-bottom: $spacing-unit / 2
+// normalize.css
+article, aside, footer, header, nav, section,
+figcaption, figure, main, figure>img,
+details, menu
+  display: block
 
+figure
+  margin: 1em 40px
 
-/**
- * Images
- */
-img 
-    max-width: 100%
-    vertical-align: middle
-
-
-/**
- * Figures
- */
-figure > img 
-    display: block
-
-
-figcaption 
-    font-size: $small-font-size
-
-
-/**
- * Lists
- */
-ul, ol 
-    margin-left: $spacing-unit / 2
-
-
-li
-    > ul,     > ol 
-        margin-bottom: 0
-    
-
-
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 
-    font-weight: $base-font-weight
-
-@for $i from 1 through 6
-    h#{$i}
-        font-size: $base-font-size * ( 6 / $i )
-
-        @if $i < 5
-
-            +media-query($content-width)
-                font-size: $base-font-size * ( 4 / $i )
-
-
-
-/**
- * Links
- */
-a 
-    text-decoration: none
-    color: darken($brand-color, 20%)
-
-    &:hover, &:active, &:focus
-        color: $brand-color
-        text-decoration: underline
-    
-
-
-/**
- * Blockquotes
- */
-blockquote 
-    color: $grey-color
-    border-left: 4px solid 
-    padding-left: $spacing-unit / 2
-
-    font-style: italic
-    > :last-child 
-        margin-bottom: 0
-
+summary
+  display: list-item
 
 hr
-    border-style: none none solid
-    margin: $spacing-unit 0
-    max-width: 80%
-    &.align-center
-        margin: $spacing-unit auto
+  box-sizing: content-box
+  height: 0
+  overflow: visible
+  border: none
+  border-bottom: 1px solid $grey-color-light
+  margin: $spacing-unit auto
 
+figcaption
+  font-size: $small-font-size
 
-/**
- * Code formatting
- */
-pre, code 
-    font-size: 15px
-    border: 1px solid $grey-color-light
-    border-radius: 3px
-    background-color: #eef
+// normalize.css
+pre, code, kbd, samp
+  font-family: monospace, monospace
+  font-size: 1em
 
+ul, ol
+  &:not(.seamless)
+    margin-left: $spacing-unit
+  &.seamless
+    list-style: none
 
-code 
-    padding: 1px 5px
+li
+  >ul, >ol
+    margin-bottom: 0
 
+h1, h2, h3, h4, h5, h6
+  font-weight: $base-font-weight
+  line-height: 1.1
 
-pre 
-    padding: 8px 12px
-    overflow-x: auto
-    > code 
-        border: 0
-        padding-right: 0
-        padding-left: 0
+h1, h2, h3, h4, h5, h6
+  font-family: $title-font-family
 
+@for $i from 1 through 6
+  h#{$i}
+    font-size: $base-font-size * 1.5 + $base-font-size / $i
 
+%transition
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+  -webkit-transition: .3s ease-in-out
+  transition: .3s ease-in-out
 
-/**
- * Wrapper
- */
-.wrapper 
-    max-width: $content-width
-    margin-right: auto
-    margin-left: auto
-    padding-right: $spacing-unit
-    padding-left: $spacing-unit
-    @extend %clearfix
-    +media-query($on-laptop)
-        padding-right: $spacing-unit / 2
-        padding-left: $spacing-unit / 2
-    
+a
+  @extend %transition
+  color: $brand-color
+  text-decoration: none
+  background-color: transparent // normalize.css IE 10
+  -webkit-text-decoration-skip: objects // normalize.css iOS 8+, Safari 8+
 
+  &:hover, &:focus, &:active
+    box-shadow: 0 0 0 3px $background-color, 0 0 0 4px $brand-color
 
-/**
- * Clearfix
- */
-%clearfix 
-    &:after 
-        content: ""
-        display: table
-        clear: both
-    
+  &[href^="mailto:"]
+    word-wrap: break-word
 
+abbr[title]
+  border-bottom: none // normalize.css Chrome 57-, FF 39-
+  text-decoration: underline // normalize.css Chrome, Edge, IE, Opera, Safari
+  text-decoration: underline dotted // normalize.css Chrome, Edge, IE, Opera, Safari
 
-/**
- * Icons
- */
-.icon 
-    > svg 
-        display: inline-block
-        width: 16px
-        height: 16px
-        vertical-align: middle
-        path 
-            fill: $grey-color
+b, strong
+  font-weight: bolder
 
+small
+  font-size: $small-font-size
 
-.call-to-action
-    margin: $spacing-unit * 2 auto
-    text-align: center
+sub, sup
+  font-size: $small-font-size * .8
+  line-height: 0
+  position: relative
+  vertical-align: baseline
 
+sub
+  bottom: -0.25em
 
+sup
+  top: -0.5em
 
-+media-greater($on-palm)
-    .float-left
-        float: left
-    .float-right
-        float: right
+audio, video, canvas
+  display: inline-block
 
+audio:not([controls])
+  display: none
+  height: 0
 
+svg:not(:root)
+  overflow: hidden
 
+template, [hidden]
+  display: none !important
 
-
-
-
-.share-heading
-    text-align: center
-
-
-.share-widget
-    .share-btn
-        display: block
-        width: 50px
-        height: 50px
-        padding: 15px
-        margin: 10px
-        border: none
-        border-radius: 500px
-        color: #fff
-
-        &:hover, &:focus
-            color: #fff
-
-        svg
-            path
-                fill: currentcolor
-
-    .btn-fb
-        +btn-shadow(#3b5998)
-    .btn-tw
-        +btn-shadow(#00aced)
-    .btn-li
-        +btn-shadow(#007bb5)
-    .btn-gp
-        +btn-shadow(#dd4b39)
-    .btn-wa
-        +btn-shadow(#43d854)
-
-
-
-
-+module(btn)
-    display: inline-block
-    padding: .3em 1em
-    border: none
-    border-radius: $spacing-unit * 10
-    text-decoration: none
-    color: #fff
-    text-transform: uppercase
-    +btn-shadow($brand-color)
-
-    &:visited, &:hover, &:active
-        color: #fff
-        text-decoration: none
-
-    &:hover, &:focus
-        text-decoration: none
-
-    +variant(big)
-        font-size: 1.2em
-        padding: .5em 1.2em
-
-
-
-
-
-
+blockquote
+  color: $grey-color
+  border-left: 4px solid $grey-color-light
+  padding-left: $spacing-unit / 2
+  font-style: italic
+  > :last-child
+    margin-bottom: 0

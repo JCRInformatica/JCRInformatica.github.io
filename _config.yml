@@ -10,6 +10,9 @@ collections:
   sections:
     title: Sections
     output: false
+  servicos:
+    title: Serviços
+    output: false
 defaults:
 - scope:
     path: ''
@@ -27,6 +30,7 @@ description: >
   pela evolução tecnológica. Formamos uma equipe técnica selecionada
   e qualificada com muito cuidado e atenção, com o preparo para
   apresentar sempre as melhores soluções para cuidar da sua empresa.
+logo: '/img/LogoJCRclaro.png'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jcrinformatica.com" # the base hostname & protocol for your site
 

@@ -1,8 +1,13 @@
 <footer class="site-footer">
 {% if page.layout != 'msg' %}
-  <div class="wrapper" data-grid="column center spacing">
-    <p class="share-heading"><strong>Compartilhe</strong></p>
-    {% include share/widget.html position='rodape' %}
+  <div class="wrapper horizontal center">
+    <p>
+      <strong>Compartilhe</strong>
+    </p>
+
+    <div>
+      {% include share/widget.html position='rodape' %}
+    </div>
   </div>
 {% endif %}
 </footer>
