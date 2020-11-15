@@ -17,9 +17,9 @@ layout: default
         <span></span>
       </button>
 
-      <div id="main-menu" class="trigger" data-grid="center around">
+      <div id="main-menu" class="trigger">
         {% for section in sections %}
-        <a class="page-link" data-cell="1of4" href="#{{section.hash}}">{{section.title}}</a>
+        <a class="page-link" href="#{{section.hash}}">{{section.title}}</a>
         {% endfor %}
       </div>
     </nav>

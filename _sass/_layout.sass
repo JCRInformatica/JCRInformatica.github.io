@@ -1,5 +1,9 @@
+$header-height: 68px
+$header-threshold: 22px
+$header-color: $aqua
+
 .site-header
-  height: 56px
+  height: $header-height
   position: fixed
   top: 0
   left: 0
@@ -8,43 +12,56 @@
 
   background-color: #000
 
+  +media-greater($on-palm)
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 25% 70%, 20% 100%, 0 100%)
+
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: $header-threshold
+      z-index: -1
+      background-color: $header-color
+      clip-path: polygon(0 88%, 20% 88%, 25% 0, 100% 0, 100% 2px, 32% 2px, 21% 100%, 0 100%)
+
   + *
-    margin-top: 80px
+    margin-top: $header-height + $header-threshold
 
 .site-title
-  margin-right: 2em
+  margin-right: 3em
   float: left
-  height: 56px
+  height: $header-height
   padding-right: $spacing-unit / 4
 
   img
     display: block
     margin-top: 8px
     width: auto
-    height: 40px
+    height: $header-height - $header-threshold
     transition: .5s ease-in-out
     transform-origin: top left
 
 .site-nav
-  display: inline-block
-  vertical-align: bottom
+  float: right
 
   .page-link
-    color: #fff
+    padding: 0 1em
+    color: $header-color
+    font-size: #{$small-font-size}
+    font-family: $title-font-family
+    font-weight: 600
+    line-height: #{$header-height - $header-threshold}
+    letter-spacing: 1px
 
     &:hover, &:focus, &:active
-      box-shadow: 0 0 0 1px #000, 0 0 0 2px #fff
-      border-radius: 2px
+      background-color: #000
+      box-shadow: inset 0 0 0 2px #000, inset 0 0 0 3px $header-color
+      outline: none
 
     +media-greater($on-palm)
-      padding: 0 1em
       display: inline-block
-      line-height: 56px
-      color: $grey-color-light
-
-      &:hover, &:focus, &.active
-        color: $brand-color
-        box-shadow: none
 
   .menu-icon
     display: none
@@ -54,33 +71,36 @@
     .menu-icon
       display: block
       position: absolute
-      top: 0
-      right: 0
+      top: -1px
+      right: -1px
       padding: 10px 16px
       line-height: 1
-      color: currentcolor
-      background-color: transparent
-      border: 0 none
 
       &:hover, &:focus, &:active
         box-shadow: none
         outline: none
 
       span
-        margin-top: 6px
+        margin-top: 4px
+        margin-bottom: 4px
         padding: 2px
         width: 26px
         display: block
         background-color: currentcolor
-        border-radius: 6px
+
+        &:nth-child(1)
+          transform: skewX(-20deg) translateX(3px)
+
+        &:nth-child(2)
+          transform: skewX(-20deg)
+
+        &:nth-child(3)
+          transform: skewX(-20deg) translateX(-3px)
 
     .page-link
       margin: $spacing-unit / 4
       padding: .25em $spacing-unit / 2
       display: block
-
-      &:hover, &:focus, &:active
-        background-color: #000
 
     .trigger
       display: none
