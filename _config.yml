@@ -1,8 +1,31 @@
 title: JCR Informática
+timezone: America/Sao_Paulo
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+  sections:
+    title: Sections
+    output: false
+defaults:
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+lang: pt_BR
 description: >
-  Somos uma empresa de soluções em TI completa e apaixonada 
-  pela evolução tecnológica. Formamos uma equipe técnica selecionada 
-  e qualificada com muito cuidado e atenção, com o preparo para 
+  Somos uma empresa de soluções em TI completa e apaixonada
+  pela evolução tecnológica. Formamos uma equipe técnica selecionada
+  e qualificada com muito cuidado e atenção, com o preparo para
   apresentar sempre as melhores soluções para cuidar da sua empresa.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jcrinformatica.com" # the base hostname & protocol for your site
@@ -12,9 +35,3 @@ markdown: kramdown
 
 sass:
   style: compressed
-
-plugins:
-  - jekyll-coffeescript
-
-exclude:
-  - desktop.ini
