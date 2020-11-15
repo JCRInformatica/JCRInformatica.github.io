@@ -1,13 +1,12 @@
 %form-basis
   padding: .5em
-  font-size: $base-font-size
+  font: inherit
+  color: inherit
   border: 1px solid
-  border-radius: 4px
-  background-color: $grey-color-light
+  border-radius: 2px
+  background-color: $background-color
   transition: .3s ease-in-out
-
-$input-shadow: inset 0 1px 1px 0 rgba($grey-color-dark, .5)
-$button-shadow: 0 1px 3px 0 rgba($grey-color-dark, .5)
+  position: relative
 
 fieldset
   -webkit-margin-start: 0
@@ -27,30 +26,76 @@ label
   text-transform: uppercase
   line-height: 1
 
-input
-  &[type='text'],
-  &[type='password'],
-  &[type='search'],
-  &[type='tel'],
-  &[type='url'],
-  &[type='email'],
-  &[type='datetime'],
-  &[type='date'],
-  &[type='time'],
-  &[type='month'],
-  &[type='week'],
-  &[type='datetime-local'],
-  &[type='number'],
-  &[type='range']
-    @extend %form-basis
-    box-shadow: $input-shadow
-    width: 100%
-
-textarea
+input, textarea, select
   @extend %form-basis
-  font-family: $base-font-family
-  box-shadow: $input-shadow
   width: 100%
+
+  &:focus
+    border-color: $aqua
+    filter: drop-shadow(0 0 4px $aqua)
+
+input
+  &[type="radio"], &[type="checkbox"]
+    width: initial
+
+button
+  @extend %form-basis
+  padding-left: 1.2em
+  padding-right: 1.2em
+  text-align: center
+  font-family: $title-font-family
+  font-weight: 600
+  letter-spacing: 1px
+  line-height: $base-line-height
+  box-shadow: none
+  background-image: linear-gradient(100deg, transparent 10%, #fff 15%, #fff 85%, transparent 90%)
+  background-size: 0
+  background-position: 0 0
+  background-repeat: no-repeat
+
+  &:before, &:after
+    @extend %transition
+    content: ''
+    display: block
+    position: absolute
+    width: 25%
+    height: .3em
+
+  &:before
+    bottom: 100%
+    right: -1px
+    background-image: linear-gradient(315deg, currentcolor 75%, transparent 75%)
+
+  &:after
+    top: 100%
+    left: -1px
+    background-image: linear-gradient(138deg, currentcolor 75%, transparent 75%)
+
+  &:hover, &:focus, &:active
+    box-shadow: none
+
+    animation: fatchim .3s ease-in-out forwards
+
+    @keyframes fatchim
+      0%
+        background-size: 0
+        background-position: 0 0
+      50%
+        background-size: 50%
+      100%
+        background-size: 0
+        background-position: 100% 100%
+
+    &:before
+      width: 70%
+
+    &:after
+      width: 50%
+
+  &:focus, &:active
+    transition-duration: .1s
+    outline: none
+    filter: drop-shadow(0 0 4px $aqua)
 
 ::-webkit-input-placeholder
   color: $grey-color
@@ -71,14 +116,3 @@ textarea
 
 .honeypot
   display: none
-
-footer
-  padding-bottom: $spacing-unit
-
-button
-  @extend %form-basis
-  box-shadow: $button-shadow
-  text-transform: uppercase
-  background-color: $grey-color-light
-  color: $grey-color-dark
-  line-height: $base-line-height
