@@ -1,0 +1,14 @@
+{
+  "name": "jcrinformatica.github.io",
+  "scripts": {
+    "postinstall": "bundle install",
+    "jekyll:serve": "bundle exec jekyll s w --livereload",
+    "webpack:build": "webpack --watch",
+    "start": "concurrently \"npm run jekyll:serve\" \"npm run webpack:build\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
