@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Acumin Pro';
+    src: url('AcuminPro-Medium.woff2') format('woff2'),
+        url('AcuminPro-Medium.woff') format('woff'),
+        url('AcuminPro-Medium.svg#AcuminPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro';
+    src: url('AcuminPro-MediumItalic.woff2') format('woff2'),
+        url('AcuminPro-MediumItalic.woff') format('woff'),
+        url('AcuminPro-MediumItalic.svg#AcuminPro-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro';
+    src: url('AcuminPro-BoldItalic.woff2') format('woff2'),
+        url('AcuminPro-BoldItalic.woff') format('woff'),
+        url('AcuminPro-BoldItalic.svg#AcuminPro-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro';
+    src: url('AcuminPro-Bold.woff2') format('woff2'),
+        url('AcuminPro-Bold.woff') format('woff'),
+        url('AcuminPro-Bold.svg#AcuminPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro';
+    src: url('AcuminPro-Black.woff2') format('woff2'),
+        url('AcuminPro-Black.woff') format('woff'),
+        url('AcuminPro-Black.svg#AcuminPro-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro';
+    src: url('AcuminPro-BlackItalic.woff2') format('woff2'),
+        url('AcuminPro-BlackItalic.woff') format('woff'),
+        url('AcuminPro-BlackItalic.svg#AcuminPro-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro';
+    src: url('AcuminPro-Light.woff2') format('woff2'),
+        url('AcuminPro-Light.woff') format('woff'),
+        url('AcuminPro-Light.svg#AcuminPro-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro';
+    src: url('AcuminPro-LightItalic.woff2') format('woff2'),
+        url('AcuminPro-LightItalic.woff') format('woff'),
+        url('AcuminPro-LightItalic.svg#AcuminPro-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
