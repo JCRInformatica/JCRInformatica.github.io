@@ -1,197 +1,101 @@
 ---
 layout: default
-sections:
-  - title: Início
-    href : '#topo'
-  - title: Empresa
-    href : '#empresa'
-  - title: Serviços
-    href : '#servicos'
-  - title: Contato
-    href : '#contato'
 ---
 
-<section class="section-hero">
-  <div class="wrapper" data-grid="center spacing">
-    <div data-cell="1of3" class="hero-img">
-      <img src="{{ '/img/Server.png' | prepend: site.baseurl }}" alt="servidor">
+<section class="section-home" id="home">
+  <div class="hero">
+    <div class="wrapper">
+      <h1 class="section-home__title">Explorando a Tecnologia,<br>Criando Soluções!</h1>
+      <a href="#contato" class="btn btn--primary">Fale agora com a JCR</a>
     </div>
-    <div data-cell="2of3" class="hero-heading"></div>
-{% comment %} 
-    <div data-cell="1of3" class="hero-aside">
-      <p class="hero-title"><small>Para o seu site:</small></p>
-      <a href="#"><img src="{{ '/img/Logo-BONSAITES.png' | prepend: site.baseurl }}" alt="Parceiro: BonSaiTes Marketing Digital"></a>
-    </div>
-{% endcomment %}
   </div>
 </section>
 
-<section class="page-content first section-empresa" id="empresa">
+<section class="section-empresa" id="empresa">
   <div class="wrapper">
-
-    <article class="empresa-sobre">
-      <h2>Sobre nós</h2>
-      <p>Somos uma empresa de soluções em TI completa e apaixonada pela evolução tecnológica. Formamos uma equipe técnica selecionada e qualificada com muito cuidado e atenção, com o preparo para apresentar sempre as melhores soluções para cuidar da sua empresa.</p>
-      
-      <div data-grid="spacing" class="empresa-figure">
-        <div data-cell="1of2">
-          <p>Nossa equipe conta com vasta experiência em produtos Microsoft e LPI, bem como a formação necessária para a implantação e suporte de infraestrutura de rede, seguindo as melhoras praticas recomendadas.</p>
-          <p class="call-to-action"><a href="#contato" data-btn="">Fale conosco</a></p>
-        </div>
-        <div data-cell="1of2" data-grid="row nowrap spacing">
-          <div data-cell="1of2"><img src="{{ '/img/icons/windows.png' | prepend: site.baseurl }}" alt="Windows"></div>
-          <div data-cell="1of2"><img src="{{ '/img/icons/linux.png' | prepend: site.baseurl }}" alt="Linux"></div>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <h2>Nossa história</h2>
-      <p>A JCR Informática surgiu em 2 de novembro de 2012. Assim a execução de sua experiência de mais de 11 anos na área de TI, com o interesse de atender o mercado carente de profissionais competentes. De início oferecíamos somente pequenos serviços aos consumidores finais ele/ou soluções residenciais, com manutenção em todos os tipos de equipamentos de informática, como computadores, monitores e impressoras.</p>
-      <p>Hoje a JCR Informática acrescentou em sua gama abrangente de serviços de TI a consultoria técnica, amparando casos residenciais e empresariais, dentre pequena, média e grande porte, as soluções de redes de computadores, firewall e assistência técnica especializada, dentre todas como também, soluções em CFTV - Sistema de Segurança Eletrônica.</p>
-    </article>
-
-    <div class="call-to-action" data-grid="column center spacing">
-      <h4 class="share-heading">Compartilhe</h4>
-      {% include share/widget.html %}
+    <div class="section-empresa__title">
+      <h2>Quem somos?</h2>
+      <p>
+        Somos uma marca comprometida em fornecer soluções inovadoras e eficientes para os desafios
+        do mundo digital. Nossa abordagem é fundamentada na expertise técnica e na busca contínua por
+        soluções práticas. Valorizamos a transparência, a qualidade e a confiabilidade em todos os
+        aspectos de nossos serviços. Nosso foco é simplificar processos, melhorar a eficiência e
+        oferecer suporte técnico de alta qualidade para pessoas físicas e empresas. Compreendemos a
+        importância da tecnologia como ferramenta transformadora e buscamos atender às necessidades
+        dos clientes de maneira objetiva.
+      </p>
     </div>
-
+    <div class="section-empresa__boxes">
+      <div class="section-empresa__box">
+        <h3>Excelência</h3>
+        <p>
+          Buscamos a excelência em tudo o que fazemos, desde a qualidade de nossos serviços até a
+          atenção aos detalhes e à satisfação do cliente.
+        </p>
+      </div>
+      <div class="section-empresa__box">
+        <h3>Confiança</h3>
+        <p>
+          Estabelecemos relações baseadas na confiança, transparência e integridade, garantindo que
+          nossos clientes saibam que podem contar conosco.
+        </p>
+      </div>
+      <div class="section-empresa__box">
+        <h3>Empatia</h3>
+        <p>
+          Entendemos as questões e desafios de nossos clientes e buscamos oferecer soluções que atendam
+          às suas necessidades específicas.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="page-content last section-servicos" id="servicos">
-  <div class="wrapper">
-    <h2>Sobre os nossos serviços</h2>
+<section class="section-servicos" id="servicos">
+  <h2 class="section-servicos__title">Serviços</h2>
 
-    <article data-grid="center spacing">
-      <div data-cell="1of3" class="figure"><img src="/img/icons/windows-2.png" alt="Servidores"></div>
-      <div data-cell="2of3">
-        <h3>Servidores</h3>
-        <p>Windows Server é uma família de sistemas operacionais Microsoft Windows baseados na arquitetura NT, direcionada para uso em servidores. Fornece os recursos de nuvem privada e híbrida necessários para atender rapidamente os requisitos de negócios.</p>
-        <p class="call-to-action"><a href="#contato" data-btn>Solicite um serviço</a></p>
-      </div>
-    </article>
-
-    <article data-grid="center spacing">
-      <div data-cell="1of3" class="figure"><img src="/img/active-directory-integration.png" alt="Controle de acessos"></div>
-      <div data-cell="2of3">
-        <h3>Active Directory e controle de acessos</h3>
-        <p>Peça fundamental no Windows Server, o Active Directory, serviço de diretórios da Microsoft, facilita a vida do administrador da rede.</p>
-        <blockquote>
-          <p>O Active Directory é uma implementação de serviço de diretório no protocolo LDAP que armazena informações sobre objetos e as disponibiliza a usuários e administradores de uma rede.</p>
-          <p><small>&#8212; Wikipedia</small></p>
-        </blockquote>
-        <p>O serviço de diretório da Microsoft foi introduzido em 1996 no Windows 2000 Server Edition, mas foi a partir do lançamento do Windows Server 2003 que ele realmente ganhou vigor. Representa uma das mais importantes facilidades do Windows Server 2003. É composto por um conjunto de ferramentas para o armazenamento e controle de informações sobre toda a configuração da rede, incluindo dispositivos e usuários.</p>
-      </div>
-    </article>
-
-    <article data-grid="center spacing">
-      <div data-cell="1of3" class="figure"><img src="/img/icons/connection.png" alt="rede de computadores"></div>
-      <div data-cell="2of3">
-        <h3>Gateway de Internet</h3>
-        <p><em>Servidor proxy transparente</em>, autenticado com base local ou autenticado com a base de dados do Active Directory. O proxy impede o acesso a sites que não colaboram com a produtividade da empresa, bem como também bloqueia downloads de arquivos nocivos e potencias transmissores de vírus.</p>
-        <p><em>Firewall fechado</em>, que permite passar dados SOMENTE nas portas TCP e UDP liberadas e restringindo totalmente o resto.</p>
-        <p><em>Interface WEB</em> para fácil administração dos serviços, para que pessoas que não tenham conhecimento de configuração de servidores também possa oferecer suporte.</p>
-      </div>
-    </article>
-
-    <article data-grid="center spacing">
-      <div data-cell="1of3" class="figure"><img src="/img/icons/network.png" alt="redes"></div>
-      <div data-cell="2of3">
-        <h3>Interligação entre Matriz e Filiais</h3>
-        <p>Configuramos a VPN para interligação de filiais e matriz, com o objetivo de ter todas as unidades em uma mesma rede, não importa em quais lugares do mundo estas unidades estejam.</p>
-        <p>Isso possibilita que todas as unidades tenham acesso ao mesmo ERP, bancos de dados, TEF, ao mesmo servidor de arquivos, ao mesmo controlador de domínio, impressora, etc.</p>
-        <p>É possível até mesmo que funcionários da empresa trabalhem em modo Home Office, de qualquer lugar do mundo.</p>
-      </div>
-    </article>
-
-    <article data-grid="center spacing">
-      <div data-cell="1of3" class="figure"><img src="/img/icons/people.png" alt="pessoas conectadas"></div>
-      <div data-cell="2of3">
-        <h3>Controlador de domínio Windows + Servidor de Arquivos</h3>
-        <p>Estrutura de GPO e acesso definido a arquivos e pastas por departamentos. Um controle efetivo de quem terá ou não acesso aos documentos de cada departamento, e mais:</p>
-        <ul>
-          <li>Sistema de cópia de sombra para recuperação de arquivos deletados acidentalmente.</li>
-          <li>Sistema de cota de disco para que seja controlado uso do espaço de armazenamento do servidor, impedindo o uso indiscriminado desse.</li>
-          <li>Sistema de restrições de gravação no servidor de arquivos, que não aceita dados que não são de interesse da empresa, como vídeos, mp3, etc.</li>
-          <li>Replicação para um segundo servidor, para que haja redundância caso um servidor ofereça problemas.</li>
-        </ul>
-      </div>
-    </article>
-
-    <article data-grid="center spacing">
-      <div data-cell="1of3" class="figure"><img src="/img/icons/monitor.png" alt="máquina virtual"></div>
-      <div data-cell="2of3">
-        <h3>Virtualização</h3>
-        <p>Fazemos toda a migração dos servidores físicos para o ambiente virtual. Sua empresa não precisa se preocupar com configurações e migração.</p>
-      </div>
-    </article>
-
-    <article data-grid="center spacing">
-      <div data-cell="1of3" class="figure"><img src="/img/icons/firewall.png" alt="Firewall"></div>
-      <div data-cell="2of3">
-        <h3>Firewall</h3>
-        <p>Um firewall é um dispositivo de uma rede de computadores que tem por objetivo aplicar uma política de segurança a um determinado ponto de rede. Os firewalls são geralmente associados a redes TCP-IP.</p>
-        <p>Este dispositivo de segurança pode existir na forma de software e de hardware. A combinação de ambos normalmente é chamado de appliance. A complexidade de instalação depende do tamanho da rede, da política de segurança, da quantidade de regras que controlam o fluxo de entrada e saída de informações e do grau de segurança desejado.</p>
-      </div>
-    </article>
-
-    <article data-grid="center spacing">
-      <div data-cell="1of3" class="figure"><img src="/img/icons/backup.png" alt="backup"></div>
-      <div data-cell="2of3">
-        <h3>Servidores de backup</h3>
-        <p>Nos dias de hoje, onde o papel é cada vez mais substituído por mídias digitais, é essencial para as empresas possuirem um sistema de backups confiável. A JCR tem um portifólio completo de soluções de segurança para proteger seus dados, inclusive backup.</p>
-      </div>
-    </article>
-
-    <article data-grid="center spacing">
-      <div data-cell="1of3" class="figure"><img src="/img/icons/sound-card.png" alt="Hardware"></div>
-      <div data-cell="2of3">
-        <h3>Manutenção de hardware</h3>
-        <div data-grid="row nowrap spacing">
-          <div data-cell=""><img src="/img/icons/laptop.png" alt="notebooks"></div>
-          <div data-cell=""><img src="/img/icons/printer.png" alt="impressoras"></div>
-          <div data-cell=""><img src="/img/icons/video-card.png" alt="placas"></div>
-        </div>
-        <p>Garantimos à sua empresa o suporte completo de manutenção e reparos em computadores desktop, notebooks, monitores, impressoras, no-breaks e estabilizadores.</p>
-      </div>
-    </article>
-
-    <article data-grid="center spacing">
-      <div data-cell="1of3" class="figure"><img src="/img/icons/hdmi.png" alt="cabos"></div>
-      <div data-cell="2of3">
-        <h3>Infraestrutura</h3>
-        <p>Fazemos toda a infraestrutura, desde cabeamento com padrões de instalação, até redes sem fio (wireless). Há diversos tipos de cabos que podem atender às várias necessidades e tamanhos de redes, de pequenas redes domésticas até grandes sistemas corporativos.</p>
-        <ul>
-          <li>Par trançado (blindado e não blindado);</li>
-          <li>Fibra óptica (mono e multi-modo)</li>
-        </ul>
-        <p>* A compreensão das diferentes aplicações de cabos é que determina quando utilizar cada tipo.</p>
-      </div>
-    </article>
-
+  <div class="section-servicos__boxes">
+    {% for servico in site.data.servicos %}
+    <div class="section-servicos__box">
+      {% include icon.html name=servico.icon %}
+      <h3>{{servico.nome}}</h3>
+      {% for paragraph in servico.descricao %}
+      <p>{{paragraph}}</p>
+      {% endfor %}
+    </div>
+    {% endfor %}
   </div>
 </section>
 
-<section class="page-content only" id="contato">
+<section class="section-banner">
   <div class="wrapper">
-    <div data-grid="justify">
-      <div data-cell="shrink">
-        <h2>Fale conosco</h2>
-      </div>
-      <div data-cell="shrink">
-        <p><a href="tel:+551533573190" data-btn>Ligue: (15) 3357-3190</a></p>
+    <p class="section-banner__text">Tecnologia personalizada para o seu futuro digital.</p>
+  </div>
+</section>
+
+<section class="section-contato" id="contato">
+  <div class="wrapper">
+    <h2 class="section-contato__title">Entre em contato!</h2>
+
+    <div class="section-contato__grid">
+      <form class="section-contato__form" action="{{site.url}}{{site.baseurl}}/enviar_email.php" method="POST">
+        <div class="section-contato__form-group">
+          <label for="name">Nome</label>
+          <input type="text" name="name" id="name" placeholder="Digite seu nome" required>
+        </div>
+        <div class="section-contato__form-group">
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+        </div>
+        <div class="section-contato__form-group">
+          <label for="message">Mensagem</label>
+          <textarea name="message" id="message" placeholder="Digite sua mensagem" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Enviar</button>
+      </form>
+      <div class="section-contato__logo">
+        <img src="{{site.baseurl}}/img/logo.png" alt="{{ site.title }}">
       </div>
     </div>
-    <form action="{{site.url}}{{site.baseurl}}/enviar_email.php" method="post">
-      <div data-grid="spacing">
-        <p data-cell="1of3"><label for="nome">Nome</label><input type="text" name="nome" placeholder="Informe seu nome" required></p>
-        <p data-cell="2of3"><label for="email">E-mail</label><input type="email" name="email" placeholder="seuemail@dominio.com" required></p>
-      </div>
-      <p><label for="assunto">Assunto</label><input type="text" name="assunto" placeholder="Solicitação/orçamento/dúvida/etc" required></p>
-      <p><label for="mensagem">Mensagem</label><textarea name="mensagem" cols="30" rows="5" placeholder="Deixe sua mensagem..."></textarea></p>
-      <p class="honeypot"><label for="honeypot">Se estiver vendo isto, deixe este campo vazio: </label><input type="text" name="honeypot"></p>
-      <p><button data-btn>Enviar</button></p>
-    </form>
   </div>
 </section>
