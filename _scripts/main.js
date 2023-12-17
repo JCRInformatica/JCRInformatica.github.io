@@ -1,49 +1,71 @@
-const $ = (selector) => document.querySelectorAll(selector);
+const header = document.querySelector(".site-header");
+const headerOffset = header.offsetTop + header.offsetHeight;
 
-const navbar = document.querySelector('.site-header');
-
-const navigate = (e) => {
-    e.preventDefault();
-    const fixbarOffset = navbar.getBoundingClientRect().height;
-    const target = e.target.href ? e.target.attributes.href.nodeValue.toString() : null;
-    
-    if (target) {
-        const sectionTarget = $(target)[0] || document.querySelector(`a[name='${target.substr(1)}']`);
-        
-        if (sectionTarget) {
-            const scrollTarget = sectionTarget.offsetTop - fixbarOffset;
-            scrollToY(scrollTarget, 500, 'easeInOutQuint', () => false);
-        }
-    }
+const addClassIf = (element, condition, className) => {
+  if (condition) {
+    element.classList.add(className);
+  } else {
+    element.classList.remove(className);
+  }
 };
 
-[...document.querySelectorAll('a[href^="#"]')].forEach((link) => {
-    link.addEventListener('click', navigate);
+const stickyHeader = () => {
+  addClassIf(header, window.scrollY > headerOffset, "sticky");
+};
+
+window.addEventListener("scroll", stickyHeader);
+
+document.documentElement.style.scrollBehavior = "smooth";
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetSection = document.querySelector(link.hash);
+    if (targetSection) {
+      targetSection.scrollIntoView();
+    }
+  });
 });
 
-const supportPageOffset = window.pageXOffset !== undefined;
-const isCSS1Compat = document.compatMode === 'CSS1Compat';
+const pageLinks = Array.from(document.querySelectorAll(".site-nav__link"));
+const sections = pageLinks.map((link) => document.querySelector(link.hash));
 
 const scrollSpy = () => {
-    const links = [...document.querySelectorAll('.site-nav .trigger .page-link')];
-    let selectedHash = '#topo';
+  pageLinks.forEach((link) => link.classList.remove("active"));
 
-    links.forEach((link) => {
-        const thisSection = $(link.hash)[0];
-        const bounds = thisSection.getBoundingClientRect();
-        if (bounds.top <= window.innerHeight * 0.3 && bounds.bottom > 0) {
-            selectedHash = link.hash;
-        }
-    });
+  sections.some((section, i) => {
+    const { top, bottom } = section.getBoundingClientRect();
 
-    links.forEach((link) => {
-        link.classList.toggle('active', link.hash === selectedHash);
-    });
+    if (top <= window.innerHeight * 0.5 && bottom >= window.innerHeight * 0.5) {
+      pageLinks[i].classList.add("active");
+      return true;
+    }
+  });
 };
 
-const onScroll = () => {
-    const y = supportPageOffset ? window.pageYOffset : (isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop);
-    scrollSpy();
-};
+window.addEventListener("scroll", scrollSpy);
 
-window.addEventListener('scroll', onScroll);
+const mobileMenuContainer = document.querySelector(".site-nav");
+const mobileMenuToggle = document.querySelector(".site-nav__menu-button");
+
+mobileMenuToggle.addEventListener("click", () => {
+  mobileMenuContainer.classList.toggle("open");
+});
+
+const formGroups = Array.from(document.querySelectorAll(".form-group"));
+
+formGroups.forEach((formGroup) => {
+  const input = formGroup.querySelector("input, textarea");
+  const validationMessage = input.title;
+  formGroup.classList.add("off");
+
+  const onFocus = () => formGroup.classList.remove("off");
+  const onBlur = () => !input.value && formGroup.classList.add("off");
+  const onInvalid = () => input.setCustomValidity(validationMessage);
+  const onInput = () => input.setCustomValidity("");
+
+  input.addEventListener("focus", onFocus);
+  input.addEventListener("blur", onBlur);
+  input.addEventListener("invalid", onInvalid);
+  input.addEventListener("input", onInput);
+});

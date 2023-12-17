@@ -1,0 +1,130 @@
+.section {
+  &-home {
+    @extend .hero--dark;
+    padding-top: 320px;
+    padding-bottom: 200px;
+    background-image: url("/img/cover.webp");
+    background-position: 70%;
+
+    &__wrapper {
+      @extend .wrapper;
+    }
+
+    &__title {
+      font-size: clamp(1.7rem, 5vw, 3.2rem);
+      margin-top: 0;
+      margin-bottom: var(--spacing-xl);
+    }
+  }
+
+  &-empresa {
+    &__intro {
+      @extend .page-content, .horizontal;
+
+      @include min-tablet {
+        --vertical-spacing: 100px;
+      }
+
+      @include max-tablet {
+        flex-direction: column;
+      }
+
+      @include min-tablet {
+        gap: 100px;
+      }
+    }
+
+    &__title {
+      white-space: nowrap;
+      font-size: 1.7rem;
+      margin-bottom: 0;
+    }
+
+    &__boxes {
+      @extend .horizontal;
+      gap: var(--spacing-s);
+      padding-bottom: var(--spacing);
+
+      @include max-tablet {
+        flex-direction: column;
+      }
+    }
+
+    &__box {
+      @extend .hero--brand;
+      --horizontal-spacing: var(--spacing-m);
+
+      position: relative;
+      z-index: 1;
+
+      @include min-tablet {
+        padding-top: 100px;
+        padding-bottom: var(--spacing-m);
+      }
+    }
+  }
+
+  &-servicos {
+    @extend .hero--dark;
+    --vertical-spacing: var(--spacing-xl);
+
+    @include min-tablet {
+      padding-top: calc(var(--spacing) * 10);
+      margin-top: calc(var(--spacing) * -10);
+    }
+
+    &__heading {
+      text-align: center;
+
+      @include min-tablet {
+        padding-top: var(--spacing-xl);
+        padding-bottom: var(--spacing-xl);
+      }
+    }
+
+    &__title {
+      display: inline-block;
+      text-align: center;
+      font-size: 1.7rem;
+      line-height: 2;
+      width: 12em;
+      max-width: 100%;
+      border: 3px solid var(--primary-color);
+    }
+
+    &__boxes {
+      @extend .auto-grid;
+      --min-column-width: 300px;
+      gap: var(--spacing-m);
+    }
+
+    &__box {
+      text-align: justify;
+
+      &.controlador-servidores {
+        grid-row: span 2;
+      }
+    }
+
+    &__box-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: var(--spacing);
+    }
+  }
+
+  &-banner {
+    @extend .hero--dark;
+    --vertical-spacing: calc(var(--spacing) * 8);
+    background-image: url("/img/keyboard-banner.webp");
+
+    &__wrapper {
+      @extend .wrapper;
+      max-width: calc(var(--spacing) * 2 + 32ch);
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.25ch;
+    }
+  }
+}

@@ -3,18 +3,16 @@ layout: default
 ---
 
 <section class="section-home" id="home">
-  <div class="hero">
-    <div class="wrapper">
-      <h1 class="section-home__title">Explorando a Tecnologia,<br>Criando Soluções!</h1>
-      <a href="#contato" class="btn btn--primary">Fale agora com a JCR</a>
-    </div>
+  <div class="section-home__wrapper">
+    <h1 class="section-home__title">Explorando a Tecnologia,<br>Criando Soluções!</h1>
+    <a href="#contato" class="btn">Fale agora com a JCR</a>
   </div>
 </section>
 
 <section class="section-empresa" id="empresa">
   <div class="wrapper">
-    <div class="section-empresa__title">
-      <h2>Quem somos?</h2>
+    <div class="section-empresa__intro">
+      <h2 class="section-empresa__title">Quem somos?</h2>
       <p>
         Somos uma marca comprometida em fornecer soluções inovadoras e eficientes para os desafios
         do mundo digital. Nossa abordagem é fundamentada na expertise técnica e na busca contínua por
@@ -52,50 +50,28 @@ layout: default
 </section>
 
 <section class="section-servicos" id="servicos">
-  <h2 class="section-servicos__title">Serviços</h2>
-
-  <div class="section-servicos__boxes">
-    {% for servico in site.data.servicos %}
-    <div class="section-servicos__box">
-      {% include icon.html name=servico.icon %}
-      <h3>{{servico.nome}}</h3>
-      {% for paragraph in servico.descricao %}
-      <p>{{paragraph}}</p>
+  <div class="wrapper">
+    <div class="section-servicos__heading">
+      <h2 class="section-servicos__title">Serviços</h2>
+    </div>
+    <div class="section-servicos__boxes">
+      {% for servico in site.data.servicos %}
+      <div class="section-servicos__box {{servico.key}}">
+        <img src="{{site.baseurl}}/img/{{servico.img}}" width="90" height="90" alt="{{servico.title}}">
+        <h3 class="section-servicos__box-title">
+          {{servico.title}}
+        </h3>
+        {% for paragraph in servico.descricao %}
+        <p>{{paragraph}}</p>
+        {% endfor %}
+      </div>
       {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </section>
 
 <section class="section-banner">
-  <div class="wrapper">
-    <p class="section-banner__text">Tecnologia personalizada para o seu futuro digital.</p>
-  </div>
-</section>
-
-<section class="section-contato" id="contato">
-  <div class="wrapper">
-    <h2 class="section-contato__title">Entre em contato!</h2>
-
-    <div class="section-contato__grid">
-      <form class="section-contato__form" action="{{site.url}}{{site.baseurl}}/enviar_email.php" method="POST">
-        <div class="section-contato__form-group">
-          <label for="name">Nome</label>
-          <input type="text" name="name" id="name" placeholder="Digite seu nome" required>
-        </div>
-        <div class="section-contato__form-group">
-          <label for="email">E-mail</label>
-          <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
-        </div>
-        <div class="section-contato__form-group">
-          <label for="message">Mensagem</label>
-          <textarea name="message" id="message" placeholder="Digite sua mensagem" required></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary">Enviar</button>
-      </form>
-      <div class="section-contato__logo">
-        <img src="{{site.baseurl}}/img/logo.png" alt="{{ site.title }}">
-      </div>
-    </div>
+  <div class="section-banner__wrapper">
+    <p>Tecnologia personalizada para o seu futuro digital.</p>
   </div>
 </section>

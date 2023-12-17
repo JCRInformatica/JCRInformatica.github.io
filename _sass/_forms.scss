@@ -1,0 +1,69 @@
+%base-form-control {
+  padding: .6em 1em;
+  font: inherit;
+  border: 1px solid var(--grey-color-300);
+  transition: 0.25s ease-in-out;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  @extend %base-form-control;
+  width: 100%;
+  color: var(--color);
+  background-color: var(--bg-color);
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: var(--grey-color-600);
+    outline: none;
+  }
+}
+
+button {
+  @extend %base-form-control;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white-color);
+  padding-left: var(--spacing-m);
+  padding-right: var(--spacing-m);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font: inherit;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--white-color);
+    text-decoration: none;
+    background-color: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
+  }
+}
+
+.form-group {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  position: relative;
+
+  label {
+    font-weight: 600;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .25s ease-in-out;
+  }
+
+  &.off label {
+    top: 2em;
+    left: .8em;
+  }
+}

@@ -1,3 +1,30 @@
-<!-- <footer class="site-footer">
+<footer class="site-footer" id="contato">
+  <div class="site-footer__wrapper">
+    <h2 class="site-footer__title">Entre em contato!</h2>
 
-</footer> -->
+    <div class="site-footer__grid">
+      <form class="site-footer__form" action="{{site.url}}{{site.baseurl}}/enviar_email.php" method="POST">
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" name="name" id="name" title="Informe o seu nome." required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" title="Informe um email válido." required>
+        </div>
+        <div class="form-group">
+          <label for="assunto">Assunto</label>
+          <input type="text" name="assunto" id="assunto" title="Informe o assunto do contato." required>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensagem</label>
+          <textarea name="message" id="message" title="Digite a sua mensagem." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Enviar</button>
+      </form>
+      <div class="site-footer__logo">
+        <img src="{{site.baseurl}}/img/footer-logo.svg" width="260" alt="{{ site.title }}">
+      </div>
+    </div>
+  </div>
+</footer>

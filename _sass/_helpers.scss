@@ -1,0 +1,68 @@
+.page-content {
+  --horizontal-spacing: 0;
+  --vertical-spacing: var(--spacing);
+  padding-top: var(--vertical-spacing);
+  padding-right: var(--horizontal-spacing);
+  padding-left: var(--horizontal-spacing);
+  padding-bottom: var(--vertical-spacing);
+}
+
+.wrapper {
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+}
+
+.auto-grid {
+  --min-column-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-column-width), 1fr));
+}
+
+.btn {
+  @extend button;
+}
+
+.hero {
+  @extend .page-content;
+  color: var(--grey-color-800);
+  background-color: var(--grey-color-300);
+  background: {
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+  }
+
+  &--dark {
+    @extend .hero;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    --link-color: var(--brand-color);
+  }
+
+  &--brand {
+    @extend .hero;
+    color: var(--grey-color-300);
+    background-color: var(--primary-color);
+    --link-color: var(--grey-color-100);
+    --hover-color: var(--white-color);
+
+    button {
+      background-color: var(--primary-color-dark);
+    }
+  }
+}
+
+ul.seamless {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

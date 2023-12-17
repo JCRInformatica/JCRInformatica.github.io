@@ -1,22 +1,25 @@
 [
   {
-    "nome": "Servidores",
-    "icon": "server",
+    "key": "servidores",
+    "title": "Servidores",
+    "img": "icons/cloud.svg",
     "descricao": [
       "Windows Server é uma família de sistemas operacionais Microsoft Windows baseados na arquitetura NT, direcionada para uso em servidores. Fornece os recursos de nuvem privada e híbrida necessários para atender rapidamente os requisitos de negócios."
     ]
   },
   {
-    "nome": "Active Directory e controles de acessos",
-    "icon": "users",
+    "key": "active-directory",
+    "title": "Active Directory e controles de acessos",
+    "img": "icons/active-directory.svg",
     "descricao": [
       "Peça fundamental no Windows Server, o Active Directory é um serviço de diretório da Microsoft que facilita a vida do administrador de rede.",
       "O Active Directory é uma implementação de serviço de diretório no protocolo LDAP que armazena informações sobre objetos e as disponibiliza a usuários e administradores de uma rede."
     ]
   },
   {
-    "nome": "Infraestrutura",
-    "icon": "cable",
+    "key": "infraestrutura",
+    "title": "Infraestrutura",
+    "img": "icons/cable.svg",
     "descricao": [
       "Fazemos toda a infraestrutura, desde cabeamento com padrões de instalação, até redes sem fio (wireless). Há diversos tipos de cabos que podem atender às várias necessidades e tamanhos de redes, de pequenas redes domésticas até grandes sistemas corporativos.",
       "Par trançado (blindado e não blindado)",
@@ -25,8 +28,9 @@
     ]
   },
   {
-    "nome": "Gateway de Internet",
-    "icon": "router",
+    "key": "gateway",
+    "title": "Gateway de Internet",
+    "img": "icons/gateway.svg",
     "descricao": [
       "Servidor proxy transparente, autenticado com base local ou autenticado com base de dados do Active Directory. O proxy impede o acesso a sites que não colaboram com a produtividade da empresa, bem como também bloqueia downloads de arquivos nocivos e potenciais transmissores de vírus.",
       "Firewall fechado, que permite passar dados somente nas portas TCP e UDP liberadas e restringindo totalmente o resto.",
@@ -34,8 +38,9 @@
     ]
   },
   {
-    "nome": "Interligação entre Matriz e Filiais",
-    "icon": "connections",
+    "key": "interligacao",
+    "title": "Interligação entre Matriz e Filiais",
+    "img": "icons/matrix.svg",
     "descricao": [
       "Configuramos a VPN para interligação de filiais e matriz, com o objetivo de ter todas as unidades em uma mesma rede, não importa em quais lugares do mundo estas unidades estejam.",
       "Isso possibilita que todas as unidades tenham acesso ao mesmo ERP, bancos de dados, TEF, ao mesmo servidor de arquivos, ao mesmo controlador de domínio, impressora, etc.",
@@ -43,30 +48,34 @@
     ]
   },
   {
-    "nome": "Firewall",
-    "icon": "firewall",
+    "key": "firewall",
+    "title": "Firewall",
+    "img": "icons/firewall.svg",
     "descricao": [
       "Um firewall é um dispositivo de uma rede de computadores que tem por objetivo aplicar uma política de segurança a um determinado ponto de rede. Os firewalls são geralmente associados a redes TCP/IP.",
       "Este dispositivo de segurança pode existir na forma de software e de hardware. A combinação de ambos normalmente é chamada de appliance. A complexidade de instalação depende do tamanho da rede, da política de segurança, da quantidade de regras que controlam o fluxo de entrada e saída de informações e do grau de segurança desejada."
     ]
   },
   {
-    "nome": "Servidores de Backup",
-    "icon": "backup",
+    "key": "backup",
+    "title": "Servidores de Backup",
+    "img": "icons/backup.svg",
     "descricao": [
       "Nos dias de hoje, onde o papel é cada vez mais substituído por mídias digitais, é essencial para as empresas possuírem um sistema de backup confiável. A JCR tem um portfólio completo de soluções de segurança para proteger seus dados, inclusive backup."
     ]
   },
   {
-    "nome": "Virtualização",
-    "icon": "virtualization",
+    "key": "virtualizacao",
+    "title": "Virtualização",
+    "img": "icons/virtualization.svg",
     "descricao": [
       "Fazemos toda a migração dos servidores físicos para o ambiente virtual. Sua empresa não precisa se preocupar com configurações e migração."
     ]
   },
   {
-    "nome": "Controlador de Domínio Windows + Servidor de Arquivos",
-    "icon": "network",
+    "key": "controlador-servidores",
+    "title": "Controlador de Domínio Windows + Servidor de Arquivos",
+    "img": "icons/servers.svg",
     "descricao": [
       "Estrutura de GPO e acesso definido a arquivos e pastas por departamentos. Um controle efetivo de quem terá ou não acesso aos documentos de cada departamento, e mais:",
       "Sistemas de cópia de sombra para recuperação de arquivos deletados acidentalmente.",
@@ -76,8 +85,9 @@
     ]
   },
   {
-    "nome": "Manutenção de Hardware",
-    "icon": "hardware",
+    "key": "manutencao-hardware",
+    "title": "Manutenção de Hardware",
+    "img": "icons/hardware.svg",
     "descricao": [
       "Notebooks, impressoras, placas.",
       "Garantimos à sua empresa o suporte completo de manutenção e reparos em computadores desktop, notebooks, monitores, impressoras, no-breaks e estabilizadores."
