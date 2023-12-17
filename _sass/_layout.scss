@@ -1,3 +1,8 @@
+body {
+  background-image: linear-gradient(var(--grey-color-900) 230px, transparent 230px);
+  background-repeat: no-repeat;
+}
+
 .site-header {
   position: absolute;
   top: 0;
@@ -5,6 +10,10 @@
   right: 0;
   z-index: 100;
   padding-top: var(--spacing);
+
+  + :not(.section-home) {
+    margin-top: 230px;
+  }
 
   &.sticky {
     padding-top: var(--spacing-s);
