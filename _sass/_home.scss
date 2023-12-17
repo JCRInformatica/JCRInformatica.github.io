@@ -1,10 +1,19 @@
 .section {
   &-home {
     @extend .hero--dark;
-    padding-top: 320px;
-    padding-bottom: 200px;
+    padding-top: 300px;
+    padding-bottom: 0;
     background-image: url("/img/cover.webp");
-    background-position: 70%;
+    background-position: 100%;
+
+    @include max-desktop {
+      padding-top: clamp(220px, 30%, 300px);
+    }
+
+    @include max-tablet {
+      padding-top: 220px;
+      background-position: 90%;
+    }
 
     &__wrapper {
       @extend .wrapper;
@@ -13,7 +22,26 @@
     &__title {
       font-size: clamp(1.7rem, 5vw, 3.2rem);
       margin-top: 0;
-      margin-bottom: var(--spacing-xl);
+    }
+
+    &__title,
+    &__cta {
+      margin-bottom: var(--spacing-l);
+    }
+
+    &__svg-lines-container {
+      padding-top: var(--spacing);
+      background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 100%,
+        rgba(0, 0, 0, 1) 0%
+      );
+
+      img {
+        margin: auto;
+        width: 100%;
+        max-width: var(--desktop-breakpoint);
+      }
     }
   }
 
@@ -116,7 +144,19 @@
   &-banner {
     @extend .hero--dark;
     --vertical-spacing: calc(var(--spacing) * 8);
-    background-image: url("/img/keyboard-banner.webp");
+    background-image: url("/img/lines-top-cut.svg"),
+      url("/img/keyboard-banner.webp");
+    background-position: center bottom, 50%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 150%, cover;
+
+    @include max-tablet {
+      background-size: auto 20%, cover;
+    }
+
+    @include min-desktop {
+      background-size: var(--desktop-breakpoint), cover;
+    }
 
     &__wrapper {
       @extend .wrapper;
