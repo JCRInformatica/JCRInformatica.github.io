@@ -48,7 +48,7 @@ window.addEventListener("scroll", scrollSpy);
 const mobileMenuContainer = document.querySelector(".site-nav");
 const mobileMenuToggle = document.querySelector(".site-nav__menu-button");
 
-mobileMenuToggle.addEventListener("click", () => {
+mobileMenuToggle?.addEventListener("click", () => {
   mobileMenuContainer.classList.toggle("open");
 });
 
